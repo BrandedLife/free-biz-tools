@@ -1,0 +1,156 @@
+export type ToolCategory =
+  | "pricing"
+  | "marketing"
+  | "ecommerce"
+  | "business";
+
+export type Tool = {
+  slug: string;
+  name: string;
+  category: ToolCategory;
+  description: string;
+  related: string[];
+};
+
+export const tools: Tool[] = [
+  {
+    slug: "profit-margin-calculator",
+    name: "Profit Margin Calculator",
+    category: "pricing",
+    description: "Calculate profit margin based on revenue and cost.",
+    related: ["markup-calculator", "gross-margin-calculator", "profit-calculator"],
+  },
+  {
+    slug: "markup-calculator",
+    name: "Markup Calculator",
+    category: "pricing",
+    description: "Calculate markup percentage based on cost and selling price.",
+    related: ["profit-margin-calculator", "product-price-calculator", "profit-calculator"],
+  },
+  {
+    slug: "discount-calculator",
+    name: "Discount Calculator",
+    category: "pricing",
+    description: "Calculate discount amount, final price, and percentage savings.",
+    related: ["product-price-calculator", "revenue-calculator", "gross-margin-calculator"],
+  },
+  {
+    slug: "break-even-calculator",
+    name: "Break-Even Calculator",
+    category: "business",
+    description: "Calculate how many units you need to sell to cover your fixed costs.",
+    related: ["profit-calculator", "revenue-calculator", "gross-margin-calculator"],
+  },
+  {
+    slug: "gross-margin-calculator",
+    name: "Gross Margin Calculator",
+    category: "pricing",
+    description: "Calculate gross margin based on revenue and cost of goods sold.",
+    related: ["profit-margin-calculator", "markup-calculator", "profit-calculator"],
+  },
+  {
+    slug: "profit-calculator",
+    name: "Profit Calculator",
+    category: "pricing",
+    description: "Calculate total profit from revenue and total costs.",
+    related: ["profit-margin-calculator", "gross-margin-calculator", "break-even-calculator"],
+  },
+  {
+    slug: "revenue-calculator",
+    name: "Revenue Calculator",
+    category: "business",
+    description: "Calculate revenue based on units sold and selling price.",
+    related: ["profit-calculator", "break-even-calculator", "discount-calculator"],
+  },
+  {
+    slug: "shopify-fee-calculator",
+    name: "Shopify Fee Calculator",
+    category: "ecommerce",
+    description: "Estimate Shopify transaction fees and net revenue after fees.",
+    related: ["stripe-fee-calculator", "paypal-fee-calculator", "product-price-calculator"],
+  },
+  {
+    slug: "stripe-fee-calculator",
+    name: "Stripe Fee Calculator",
+    category: "ecommerce",
+    description: "Calculate Stripe fees and your net payout after payment processing costs.",
+    related: ["shopify-fee-calculator", "paypal-fee-calculator", "vat-calculator"],
+  },
+  {
+    slug: "paypal-fee-calculator",
+    name: "PayPal Fee Calculator",
+    category: "ecommerce",
+    description: "Estimate PayPal fees and net amount received from a payment.",
+    related: ["stripe-fee-calculator", "shopify-fee-calculator", "product-price-calculator"],
+  },
+  {
+    slug: "vat-calculator",
+    name: "VAT Calculator",
+    category: "ecommerce",
+    description: "Calculate VAT-inclusive and VAT-exclusive prices.",
+    related: ["product-price-calculator", "stripe-fee-calculator", "shopify-fee-calculator"],
+  },
+  {
+    slug: "product-price-calculator",
+    name: "Product Price Calculator",
+    category: "pricing",
+    description: "Calculate selling price based on cost, markup, VAT, and fees.",
+    related: ["markup-calculator", "vat-calculator", "shopify-fee-calculator"],
+  },
+  {
+    slug: "roas-calculator",
+    name: "ROAS Calculator",
+    category: "marketing",
+    description: "Calculate return on ad spend based on revenue and ad costs.",
+    related: ["cac-calculator", "cpc-calculator", "conversion-rate-calculator"],
+  },
+  {
+    slug: "conversion-rate-calculator",
+    name: "Conversion Rate Calculator",
+    category: "marketing",
+    description: "Calculate conversion rate based on visitors and conversions.",
+    related: ["cpc-calculator", "roas-calculator", "cac-calculator"],
+  },
+  {
+    slug: "cac-calculator",
+    name: "CAC Calculator",
+    category: "marketing",
+    description: "Calculate customer acquisition cost based on total spend and new customers.",
+    related: ["roas-calculator", "conversion-rate-calculator", "cpm-calculator"],
+  },
+  {
+    slug: "cpc-calculator",
+    name: "CPC Calculator",
+    category: "marketing",
+    description: "Calculate cost per click based on spend and total clicks.",
+    related: ["cpm-calculator", "conversion-rate-calculator", "roas-calculator"],
+  },
+  {
+    slug: "cpm-calculator",
+    name: "CPM Calculator",
+    category: "marketing",
+    description: "Calculate cost per thousand impressions based on spend and impressions.",
+    related: ["cpc-calculator", "cac-calculator", "conversion-rate-calculator"],
+  },
+  {
+    slug: "loan-payment-calculator",
+    name: "Loan Payment Calculator",
+    category: "business",
+    description: "Calculate monthly loan payments based on loan amount, interest rate, and term.",
+    related: ["compound-interest-calculator", "roi-calculator", "break-even-calculator"],
+  },
+  {
+    slug: "compound-interest-calculator",
+    name: "Compound Interest Calculator",
+    category: "business",
+    description: "Estimate future value using compound interest over time.",
+    related: ["loan-payment-calculator", "roi-calculator", "revenue-calculator"],
+  },
+  {
+    slug: "roi-calculator",
+    name: "ROI Calculator",
+    category: "business",
+    description: "Calculate return on investment based on gain and cost.",
+    related: ["roas-calculator", "profit-calculator", "compound-interest-calculator"],
+  },
+];
