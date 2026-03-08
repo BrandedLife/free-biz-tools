@@ -2,6 +2,8 @@ import { MetadataRoute } from "next";
 import { tools } from "@/tools/data/tools";
 import { toolCategories } from "@/tools/data/categories";
 
+export const dynamic = "force-static";
+
 const BASE_URL = "https://free-biz-tools.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
