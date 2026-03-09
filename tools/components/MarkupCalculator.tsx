@@ -26,7 +26,7 @@ export default function MarkupCalculator() {
           type="number"
           value={cost}
           onChange={(e) => setCost(e.target.value)}
-          className="w-full rounded-lg border border-gray-300 px-3 py-2"
+          className="input-premium"
           placeholder="Enter cost"
         />
       </div>
@@ -39,12 +39,12 @@ export default function MarkupCalculator() {
           type="number"
           value={sellingPrice}
           onChange={(e) => setSellingPrice(e.target.value)}
-          className="w-full rounded-lg border border-gray-300 px-3 py-2"
+          className="input-premium"
           placeholder="Enter selling price"
         />
       </div>
 
-      <div className="rounded-lg bg-gray-50 p-4">
+      <div className="result-premium">
         <p className="text-sm text-gray-600">Markup</p>
         <p className="text-2xl font-semibold text-gray-900">{result ?? "—"}</p>
       </div>

@@ -30,7 +30,7 @@ export default function ProductPriceCalculator() {
   }
 
   return (
-    <div className="space-y-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+    <div className="space-y-5">
       <div>
         <label className="mb-1 block text-sm font-medium text-gray-700">
           Product Cost
@@ -39,7 +39,7 @@ export default function ProductPriceCalculator() {
           type="number"
           value={cost}
           onChange={(e) => setCost(e.target.value)}
-          className="w-full rounded-lg border border-gray-300 px-3 py-2"
+          className="input-premium"
           placeholder="Enter product cost"
         />
       </div>
@@ -53,7 +53,7 @@ export default function ProductPriceCalculator() {
             type="number"
             value={markupPercent}
             onChange={(e) => setMarkupPercent(e.target.value)}
-            className="w-full rounded-lg border border-gray-300 px-3 py-2"
+            className="input-premium"
             placeholder="Enter markup %"
           />
         </div>
@@ -66,7 +66,7 @@ export default function ProductPriceCalculator() {
             type="number"
             value={vatPercent}
             onChange={(e) => setVatPercent(e.target.value)}
-            className="w-full rounded-lg border border-gray-300 px-3 py-2"
+            className="input-premium"
             placeholder="15"
           />
         </div>
@@ -79,26 +79,26 @@ export default function ProductPriceCalculator() {
             type="number"
             value={feePercent}
             onChange={(e) => setFeePercent(e.target.value)}
-            className="w-full rounded-lg border border-gray-300 px-3 py-2"
+            className="input-premium"
             placeholder="0"
           />
         </div>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-3">
-        <div className="rounded-lg bg-gray-50 p-4">
+        <div className="result-premium">
           <p className="text-sm text-gray-600">Price Ex VAT</p>
           <p className="text-2xl font-semibold text-gray-900">
             {sellingPriceExVat ?? "—"}
           </p>
         </div>
 
-        <div className="rounded-lg bg-gray-50 p-4">
+        <div className="result-premium">
           <p className="text-sm text-gray-600">VAT Amount</p>
           <p className="text-2xl font-semibold text-gray-900">{vatAmount ?? "—"}</p>
         </div>
 
-        <div className="rounded-lg bg-gray-50 p-4">
+        <div className="result-premium">
           <p className="text-sm text-gray-600">Price Inc VAT</p>
           <p className="text-2xl font-semibold text-gray-900">
             {sellingPriceIncVat ?? "—"}

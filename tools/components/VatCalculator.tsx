@@ -24,7 +24,7 @@ export default function VatCalculator() {
   }
 
   return (
-    <div className="space-y-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+    <div className="space-y-5">
       <div>
         <label className="mb-1 block text-sm font-medium text-gray-700">
           Base Amount
@@ -33,7 +33,7 @@ export default function VatCalculator() {
           type="number"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
-          className="w-full rounded-lg border border-gray-300 px-3 py-2"
+          className="input-premium"
           placeholder="Enter amount"
         />
       </div>
@@ -46,25 +46,25 @@ export default function VatCalculator() {
           type="number"
           value={vatRate}
           onChange={(e) => setVatRate(e.target.value)}
-          className="w-full rounded-lg border border-gray-300 px-3 py-2"
+          className="input-premium"
           placeholder="15"
         />
       </div>
 
       <div className="grid gap-4 sm:grid-cols-3">
-        <div className="rounded-lg bg-gray-50 p-4">
+        <div className="result-premium">
           <p className="text-sm text-gray-600">VAT Amount</p>
           <p className="text-2xl font-semibold text-gray-900">{vatAmount ?? "—"}</p>
         </div>
 
-        <div className="rounded-lg bg-gray-50 p-4">
+        <div className="result-premium">
           <p className="text-sm text-gray-600">Including VAT</p>
           <p className="text-2xl font-semibold text-gray-900">
             {totalIncludingVat ?? "—"}
           </p>
         </div>
 
-        <div className="rounded-lg bg-gray-50 p-4">
+        <div className="result-premium">
           <p className="text-sm text-gray-600">Excluding VAT</p>
           <p className="text-2xl font-semibold text-gray-900">
             {amountExcludingVat ?? "—"}

@@ -34,7 +34,7 @@ export default function CompoundInterestCalculator() {
   }
 
   return (
-    <div className="space-y-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+    <div className="space-y-5">
       <div>
         <label className="mb-1 block text-sm font-medium text-gray-700">
           Initial Amount
@@ -43,7 +43,7 @@ export default function CompoundInterestCalculator() {
           type="number"
           value={principal}
           onChange={(e) => setPrincipal(e.target.value)}
-          className="w-full rounded-lg border border-gray-300 px-3 py-2"
+          className="input-premium"
           placeholder="Enter initial amount"
         />
       </div>
@@ -57,7 +57,7 @@ export default function CompoundInterestCalculator() {
             type="number"
             value={annualRate}
             onChange={(e) => setAnnualRate(e.target.value)}
-            className="w-full rounded-lg border border-gray-300 px-3 py-2"
+            className="input-premium"
             placeholder="Enter annual rate"
           />
         </div>
@@ -70,7 +70,7 @@ export default function CompoundInterestCalculator() {
             type="number"
             value={years}
             onChange={(e) => setYears(e.target.value)}
-            className="w-full rounded-lg border border-gray-300 px-3 py-2"
+            className="input-premium"
             placeholder="Enter years"
           />
         </div>
@@ -83,13 +83,13 @@ export default function CompoundInterestCalculator() {
             type="number"
             value={compoundsPerYear}
             onChange={(e) => setCompoundsPerYear(e.target.value)}
-            className="w-full rounded-lg border border-gray-300 px-3 py-2"
+            className="winput-premium"
             placeholder="12"
           />
         </div>
       </div>
 
-      <div className="rounded-lg bg-gray-50 p-4">
+      <div className="result-premium">
         <p className="text-sm text-gray-600">Future Value</p>
         <p className="text-2xl font-semibold text-gray-900">
           {futureValue ?? "—"}

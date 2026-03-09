@@ -38,7 +38,7 @@ export default function LoanPaymentCalculator() {
   }
 
   return (
-    <div className="space-y-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+    <div className="space-y-5">
       <div>
         <label className="mb-1 block text-sm font-medium text-gray-700">
           Loan Amount
@@ -47,7 +47,7 @@ export default function LoanPaymentCalculator() {
           type="number"
           value={loanAmount}
           onChange={(e) => setLoanAmount(e.target.value)}
-          className="w-full rounded-lg border border-gray-300 px-3 py-2"
+          className="input-premium"
           placeholder="Enter loan amount"
         />
       </div>
@@ -61,7 +61,7 @@ export default function LoanPaymentCalculator() {
             type="number"
             value={annualInterestRate}
             onChange={(e) => setAnnualInterestRate(e.target.value)}
-            className="w-full rounded-lg border border-gray-300 px-3 py-2"
+            className="input-premium"
             placeholder="Enter annual rate"
           />
         </div>
@@ -74,13 +74,13 @@ export default function LoanPaymentCalculator() {
             type="number"
             value={loanTermYears}
             onChange={(e) => setLoanTermYears(e.target.value)}
-            className="w-full rounded-lg border border-gray-300 px-3 py-2"
+            className="input-premium"
             placeholder="Enter years"
           />
         </div>
       </div>
 
-      <div className="rounded-lg bg-gray-50 p-4">
+      <div className="result-premium">
         <p className="text-sm text-gray-600">Estimated Monthly Payment</p>
         <p className="text-2xl font-semibold text-gray-900">
           {monthlyPayment ?? "—"}

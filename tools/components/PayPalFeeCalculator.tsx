@@ -23,7 +23,7 @@ export default function PayPalFeeCalculator() {
   }
 
   return (
-    <div className="space-y-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+    <div className="space-y-5">
       <div>
         <label className="mb-1 block text-sm font-medium text-gray-700">
           Payment Amount
@@ -32,7 +32,7 @@ export default function PayPalFeeCalculator() {
           type="number"
           value={paymentAmount}
           onChange={(e) => setPaymentAmount(e.target.value)}
-          className="w-full rounded-lg border border-gray-300 px-3 py-2"
+          className="input-premium"
           placeholder="Enter payment amount"
         />
       </div>
@@ -46,7 +46,7 @@ export default function PayPalFeeCalculator() {
             type="number"
             value={feePercent}
             onChange={(e) => setFeePercent(e.target.value)}
-            className="w-full rounded-lg border border-gray-300 px-3 py-2"
+            className="input-premium"
             placeholder="3.49"
           />
         </div>
@@ -59,19 +59,19 @@ export default function PayPalFeeCalculator() {
             type="number"
             value={fixedFee}
             onChange={(e) => setFixedFee(e.target.value)}
-            className="w-full rounded-lg border border-gray-300 px-3 py-2"
+            className="input-premium"
             placeholder="0.49"
           />
         </div>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
-        <div className="rounded-lg bg-gray-50 p-4">
+        <div className="result-premium">
           <p className="text-sm text-gray-600">PayPal Fee</p>
           <p className="text-2xl font-semibold text-gray-900">{fee ?? "—"}</p>
         </div>
 
-        <div className="rounded-lg bg-gray-50 p-4">
+        <div className="result-premium">
           <p className="text-sm text-gray-600">Net Amount</p>
           <p className="text-2xl font-semibold text-gray-900">{net ?? "—"}</p>
         </div>
