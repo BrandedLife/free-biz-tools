@@ -25,3 +25,77 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+:root {
+  --surface: #ffffff;
+  --surface-muted: #f8fafc;
+  --border-soft: #e2e8f0;
+  --text-strong: #0f172a;
+  --text-muted: #64748b;
+  --accent: #6366f1;
+  --accent-hover: #4f46e5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(to bottom, #f8fafc 0%, #ffffff 30%, #f8fafc 100%);
+  color: var(--text-strong);
+}
+
+::selection {
+  background: rgba(99, 102, 241, 0.16);
+}
+
+.surface-card {
+  @apply rounded-3xl border border-slate-200 bg-white shadow-sm;
+}
+
+.surface-card-soft {
+  @apply rounded-3xl border border-slate-200/80 bg-white/80 shadow-sm backdrop-blur;
+}
+
+.section-shell {
+  @apply mx-auto max-w-6xl px-6;
+}
+
+.page-shell {
+  @apply mx-auto max-w-4xl px-6;
+}
+
+.eyebrow {
+  @apply text-xs font-semibold uppercase tracking-[0.18em] text-slate-500;
+}
+
+.hero-title {
+  @apply text-4xl font-semibold tracking-tight text-slate-950 md:text-6xl;
+}
+
+.section-title {
+  @apply text-2xl font-semibold tracking-tight text-slate-950 md:text-3xl;
+}
+
+.body-lg {
+  @apply text-lg leading-8 text-slate-600;
+}
+
+.input-premium {
+  @apply w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-slate-900 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100;
+}
+
+.result-premium {
+  @apply rounded-2xl border border-indigo-100 bg-indigo-50/70 p-5;
+}
+
+.button-primary {
+  @apply inline-flex items-center justify-center rounded-2xl bg-indigo-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-indigo-700;
+}
+
+.button-secondary {
+  @apply inline-flex items-center justify-center rounded-2xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-50;
+}
+
+.prose :where(h2, h3) {
+  scroll-margin-top: 96px;
+}
