@@ -6,6 +6,8 @@ import MdxContent from "@/tools/components/MdxContent";
 import fs from "fs";
 import path from "path";
 
+const BASE_URL = "https://free-biz-tools.com";
+
 export function generateStaticParams() {
   return tools.map((tool) => ({
     slug: tool.slug,
@@ -25,23 +27,26 @@ export async function generateMetadata({
     return {};
   }
 
+  const fullUrl = `${BASE_URL}/tools/${tool.slug}`;
+  const fullDescription = `${tool.description} Use this free calculator to get a quick answer.`;
+
   return {
     title: `${tool.name} | Free Biz Tools`,
-    description: `${tool.description} Use this free calculator to get a quick answer.`,
+    description: fullDescription,
     alternates: {
-      canonical: `/tools/${tool.slug}`,
+      canonical: fullUrl,
     },
     openGraph: {
       title: `${tool.name} | Free Biz Tools`,
-      description: `${tool.description} Use this free calculator to get a quick answer.`,
-      url: `/tools/${tool.slug}`,
+      description: fullDescription,
+      url: fullUrl,
       siteName: "Free Biz Tools",
       type: "website",
     },
     twitter: {
       card: "summary",
       title: `${tool.name} | Free Biz Tools`,
-      description: `${tool.description} Use this free calculator to get a quick answer.`,
+      description: fullDescription,
     },
   };
 }
@@ -76,6 +81,7 @@ export default async function ToolPage({
   }
 
   const CalculatorComponent = toolRegistry[slug];
+  const fullUrl = `${BASE_URL}/tools/${tool.slug}`;
 
   const schema = {
     "@context": "https://schema.org",
@@ -84,11 +90,17 @@ export default async function ToolPage({
     description: tool.description,
     applicationCategory: "BusinessApplication",
     operatingSystem: "Any",
-    url: `/tools/${tool.slug}`,
+    url: fullUrl,
+    isAccessibleForFree: true,
     offers: {
       "@type": "Offer",
       price: "0",
       priceCurrency: "USD",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Free Biz Tools",
+      url: BASE_URL,
     },
   };
 
