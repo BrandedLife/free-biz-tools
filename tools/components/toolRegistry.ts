@@ -20,6 +20,11 @@ import CpmCalculator from "@/tools/components/CpmCalculator";
 import LoanPaymentCalculator from "@/tools/components/LoanPaymentCalculator";
 import CompoundInterestCalculator from "@/tools/components/CompoundInterestCalculator";
 import RoiCalculator from "@/tools/components/RoiCalculator";
+import NetProfitCalculator from "@/tools/components/NetProfitCalculator";
+import ContributionMarginCalculator from "@/tools/components/ContributionMarginCalculator";
+import CostPerUnitCalculator from "@/tools/components/CostPerUnitCalculator";
+import TargetProfitCalculator from "@/tools/components/TargetProfitCalculator";
+import UnitPriceCalculator from "@/tools/components/UnitPriceCalculator";
 
 export const toolRegistry: Record<string, ComponentType> = {
   "profit-margin-calculator": ProfitMarginCalculator,
@@ -42,4 +47,9 @@ export const toolRegistry: Record<string, ComponentType> = {
   "loan-payment-calculator": LoanPaymentCalculator,
   "compound-interest-calculator": CompoundInterestCalculator,
   "roi-calculator": RoiCalculator,
+  "net-profit-calculator": NetProfitCalculator,
+  "contribution-margin-calculator": ContributionMarginCalculator,
+  "cost-per-unit-calculator": CostPerUnitCalculator,
+  "target-profit-calculator": TargetProfitCalculator,
+  "unit-price-calculator": UnitPriceCalculator,
 };
