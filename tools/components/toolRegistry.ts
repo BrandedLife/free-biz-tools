@@ -45,6 +45,11 @@ import HourlyRateCalculator from "@/tools/components/HourlyRateCalculator";
 import ContractorRateCalculator from "@/tools/components/ContractorRateCalculator";
 import CommissionCalculator from "@/tools/components/CommissionCalculator";
 import PaybackPeriodCalculator from "@/tools/components/PaybackPeriodCalculator";
+import SaasMrrCalculator from "@/tools/components/SaasMrrCalculator";
+import SaasArrCalculator from "@/tools/components/SaasArrCalculator";
+import LoanInterestCalculator from "@/tools/components/LoanInterestCalculator";
+import InvestmentReturnCalculator from "@/tools/components/InvestmentReturnCalculator";
+import AmortizationCalculator from "@/tools/components/AmortizationCalculator";
 
 export const toolRegistry: Record<string, ComponentType> = {
   "profit-margin-calculator": ProfitMarginCalculator,
@@ -90,5 +95,10 @@ export const toolRegistry: Record<string, ComponentType> = {
   "hourly-rate-calculator": HourlyRateCalculator,
   "contractor-rate-calculator": ContractorRateCalculator,
   "commission-calculator": CommissionCalculator,
-  "payback-period-calculator": PaybackPeriodCalculator,  
+  "payback-period-calculator": PaybackPeriodCalculator,
+  "saas-mrr-calculator": SaasMrrCalculator,
+  "saas-arr-calculator": SaasArrCalculator,
+  "loan-interest-calculator": LoanInterestCalculator,
+  "investment-return-calculator": InvestmentReturnCalculator,
+  "amortization-calculator": AmortizationCalculator,  
 };
