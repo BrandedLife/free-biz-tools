@@ -40,6 +40,11 @@ import RevenueGrowthCalculator from "@/tools/components/RevenueGrowthCalculator"
 import PriceElasticityCalculator from "@/tools/components/PriceElasticityCalculator";
 import PercentageCalculator from "@/tools/components/PercentageCalculator";
 import PercentageChangeCalculator from "@/tools/components/PercentageChangeCalculator";
+import EmployeeCostCalculator from "@/tools/components/EmployeeCostCalculator";
+import HourlyRateCalculator from "@/tools/components/HourlyRateCalculator";
+import ContractorRateCalculator from "@/tools/components/ContractorRateCalculator";
+import CommissionCalculator from "@/tools/components/CommissionCalculator";
+import PaybackPeriodCalculator from "@/tools/components/PaybackPeriodCalculator";
 
 export const toolRegistry: Record<string, ComponentType> = {
   "profit-margin-calculator": ProfitMarginCalculator,
@@ -67,7 +72,7 @@ export const toolRegistry: Record<string, ComponentType> = {
   "cost-per-unit-calculator": CostPerUnitCalculator,
   "target-profit-calculator": TargetProfitCalculator,
   "unit-price-calculator": UnitPriceCalculator,
-    "ltv-calculator": LtvCalculator,
+  "ltv-calculator": LtvCalculator,
   "marketing-roi-calculator": MarketingRoiCalculator,
   "cpm-to-cpc-calculator": CpmToCpcCalculator,
   "cpc-to-cpa-calculator": CpcToCpaCalculator,
@@ -77,9 +82,13 @@ export const toolRegistry: Record<string, ComponentType> = {
   "inventory-turnover-calculator": InventoryTurnoverCalculator,
   "average-order-value-calculator": AverageOrderValueCalculator,
   "sales-tax-calculator": SalesTaxCalculator,
-    "break-even-revenue-calculator": BreakEvenRevenueCalculator,
+  "break-even-revenue-calculator": BreakEvenRevenueCalculator,
   "revenue-growth-calculator": RevenueGrowthCalculator,
   "price-elasticity-calculator": PriceElasticityCalculator,
-  "percentage-calculator": PercentageCalculator,
-  "percentage-change-calculator": PercentageChangeCalculator,  
+  "percentage-change-calculator": PercentageChangeCalculator,
+  "employee-cost-calculator": EmployeeCostCalculator,
+  "hourly-rate-calculator": HourlyRateCalculator,
+  "contractor-rate-calculator": ContractorRateCalculator,
+  "commission-calculator": CommissionCalculator,
+  "payback-period-calculator": PaybackPeriodCalculator,  
 };
