@@ -30,6 +30,11 @@ import MarketingRoiCalculator from "@/tools/components/MarketingRoiCalculator";
 import CpmToCpcCalculator from "@/tools/components/CpmToCpcCalculator";
 import CpcToCpaCalculator from "@/tools/components/CpcToCpaCalculator";
 import ConversionRateImprovementCalculator from "@/tools/components/ConversionRateImprovementCalculator";
+import AmazonFbaFeeCalculator from "@/tools/components/AmazonFbaFeeCalculator";
+import ShippingProfitCalculator from "@/tools/components/ShippingProfitCalculator";
+import InventoryTurnoverCalculator from "@/tools/components/InventoryTurnoverCalculator";
+import AverageOrderValueCalculator from "@/tools/components/AverageOrderValueCalculator";
+import SalesTaxCalculator from "@/tools/components/SalesTaxCalculator";
 
 export const toolRegistry: Record<string, ComponentType> = {
   "profit-margin-calculator": ProfitMarginCalculator,
@@ -62,4 +67,9 @@ export const toolRegistry: Record<string, ComponentType> = {
   "cpm-to-cpc-calculator": CpmToCpcCalculator,
   "cpc-to-cpa-calculator": CpcToCpaCalculator,
   "conversion-rate-improvement-calculator": ConversionRateImprovementCalculator,
+  "amazon-fba-fee-calculator": AmazonFbaFeeCalculator,
+  "shipping-profit-calculator": ShippingProfitCalculator,
+  "inventory-turnover-calculator": InventoryTurnoverCalculator,
+  "average-order-value-calculator": AverageOrderValueCalculator,
+  "sales-tax-calculator": SalesTaxCalculator,  
 };
