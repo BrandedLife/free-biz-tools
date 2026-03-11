@@ -258,4 +258,32 @@ export const tools: Tool[] = [
     description: "Calculate sales tax amount and total price including tax.",
     related: ["vat-calculator", "product-price-calculator", "discount-calculator"],
   },
+    {
+    slug: "break-even-revenue-calculator",
+    name: "Break-Even Revenue Calculator",
+    category: "business",
+    description: "Calculate the revenue needed to break even based on fixed costs and contribution margin ratio.",
+    related: ["break-even-calculator", "contribution-margin-calculator", "revenue-calculator"],
+  },
+  {
+    slug: "revenue-growth-calculator",
+    name: "Revenue Growth Calculator",
+    category: "business",
+    description: "Calculate revenue growth percentage between two periods.",
+    related: ["revenue-calculator", "roi-calculator", "percentage-change-calculator"],
+  },
+  {
+    slug: "price-elasticity-calculator",
+    name: "Price Elasticity Calculator",
+    category: "pricing",
+    description: "Calculate price elasticity of demand based on price and quantity changes.",
+    related: ["product-price-calculator", "discount-calculator", "revenue-growth-calculator"],
+  },
+  {
+    slug: "percentage-change-calculator",
+    name: "Percentage Change Calculator",
+    category: "business",
+    description: "Calculate percentage increase or decrease between two values.",
+    related: ["percentage-calculator", "revenue-growth-calculator", "price-elasticity-calculator"],
+  },
 ];

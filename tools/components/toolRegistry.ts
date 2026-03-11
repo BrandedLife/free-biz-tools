@@ -35,6 +35,11 @@ import ShippingProfitCalculator from "@/tools/components/ShippingProfitCalculato
 import InventoryTurnoverCalculator from "@/tools/components/InventoryTurnoverCalculator";
 import AverageOrderValueCalculator from "@/tools/components/AverageOrderValueCalculator";
 import SalesTaxCalculator from "@/tools/components/SalesTaxCalculator";
+import BreakEvenRevenueCalculator from "@/tools/components/BreakEvenRevenueCalculator";
+import RevenueGrowthCalculator from "@/tools/components/RevenueGrowthCalculator";
+import PriceElasticityCalculator from "@/tools/components/PriceElasticityCalculator";
+import PercentageCalculator from "@/tools/components/PercentageCalculator";
+import PercentageChangeCalculator from "@/tools/components/PercentageChangeCalculator";
 
 export const toolRegistry: Record<string, ComponentType> = {
   "profit-margin-calculator": ProfitMarginCalculator,
@@ -71,5 +76,10 @@ export const toolRegistry: Record<string, ComponentType> = {
   "shipping-profit-calculator": ShippingProfitCalculator,
   "inventory-turnover-calculator": InventoryTurnoverCalculator,
   "average-order-value-calculator": AverageOrderValueCalculator,
-  "sales-tax-calculator": SalesTaxCalculator,  
+  "sales-tax-calculator": SalesTaxCalculator,
+    "break-even-revenue-calculator": BreakEvenRevenueCalculator,
+  "revenue-growth-calculator": RevenueGrowthCalculator,
+  "price-elasticity-calculator": PriceElasticityCalculator,
+  "percentage-calculator": PercentageCalculator,
+  "percentage-change-calculator": PercentageChangeCalculator,  
 };
