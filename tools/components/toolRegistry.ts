@@ -25,6 +25,11 @@ import ContributionMarginCalculator from "@/tools/components/ContributionMarginC
 import CostPerUnitCalculator from "@/tools/components/CostPerUnitCalculator";
 import TargetProfitCalculator from "@/tools/components/TargetProfitCalculator";
 import UnitPriceCalculator from "@/tools/components/UnitPriceCalculator";
+import LtvCalculator from "@/tools/components/LtvCalculator";
+import MarketingRoiCalculator from "@/tools/components/MarketingRoiCalculator";
+import CpmToCpcCalculator from "@/tools/components/CpmToCpcCalculator";
+import CpcToCpaCalculator from "@/tools/components/CpcToCpaCalculator";
+import ConversionRateImprovementCalculator from "@/tools/components/ConversionRateImprovementCalculator";
 
 export const toolRegistry: Record<string, ComponentType> = {
   "profit-margin-calculator": ProfitMarginCalculator,
@@ -52,4 +57,9 @@ export const toolRegistry: Record<string, ComponentType> = {
   "cost-per-unit-calculator": CostPerUnitCalculator,
   "target-profit-calculator": TargetProfitCalculator,
   "unit-price-calculator": UnitPriceCalculator,
+    "ltv-calculator": LtvCalculator,
+  "marketing-roi-calculator": MarketingRoiCalculator,
+  "cpm-to-cpc-calculator": CpmToCpcCalculator,
+  "cpc-to-cpa-calculator": CpcToCpaCalculator,
+  "conversion-rate-improvement-calculator": ConversionRateImprovementCalculator,
 };
