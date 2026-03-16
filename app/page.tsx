@@ -2,6 +2,7 @@ import Link from "next/link";
 import { tools } from "@/tools/data/tools";
 import { toolCategories } from "@/tools/data/categories";
 import ToolCard from "@/tools/components/ToolCard";
+import CalculatorSearch from "@/tools/components/CalculatorSearch";
 
 export default function HomePage() {
   const featuredSlugs = [
@@ -65,6 +66,10 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="section-shell pb-16">
+        <CalculatorSearch />
       </section>
 
       <section className="section-shell pb-16">
