@@ -356,4 +356,11 @@ export const tools: Tool[] = [
     description: "Estimate payment breakdown over time for an amortizing loan.",
     related: ["loan-payment-calculator", "loan-interest-calculator", "payback-period-calculator"],
   },
+  {
+  slug: "percentage-calculator",
+  name: "Percentage Calculator",
+  category: "business",
+  description: "Calculate what percentage one number is of another.",
+  related: ["discount-calculator", "conversion-rate-calculator", "revenue-growth-calculator"],
+  },
 ];

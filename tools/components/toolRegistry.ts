@@ -100,5 +100,6 @@ export const toolRegistry: Record<string, ComponentType> = {
   "saas-arr-calculator": SaasArrCalculator,
   "loan-interest-calculator": LoanInterestCalculator,
   "investment-return-calculator": InvestmentReturnCalculator,
-  "amortization-calculator": AmortizationCalculator,  
+  "amortization-calculator": AmortizationCalculator,
+  "percentage-calculator": PercentageCalculator, 
 };
