@@ -17,7 +17,7 @@ export default function RoiCalculator() {
   }
 
   return (
-    <div className="space-y-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+    <div className="space-y-5">
       <div>
         <label className="mb-1 block text-sm font-medium text-gray-700">
           Gain / Return

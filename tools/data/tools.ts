@@ -2,7 +2,8 @@ export type ToolCategory =
   | "pricing"
   | "marketing"
   | "ecommerce"
-  | "business";
+  | "business"
+  | "sales";
 
 export type Tool = {
   slug: string;
@@ -153,7 +154,7 @@ export const tools: Tool[] = [
     description: "Calculate return on investment based on gain and cost.",
     related: ["roas-calculator", "profit-calculator", "compound-interest-calculator"],
   },
-    {
+  {
     slug: "net-profit-calculator",
     name: "Net Profit Calculator",
     category: "pricing",
@@ -188,7 +189,7 @@ export const tools: Tool[] = [
     description: "Calculate price per unit based on total price and quantity.",
     related: ["cost-per-unit-calculator", "product-price-calculator", "markup-calculator"],
   },
-    {
+  {
     slug: "ltv-calculator",
     name: "LTV Calculator",
     category: "marketing",
@@ -223,7 +224,7 @@ export const tools: Tool[] = [
     description: "Measure percentage improvement between an old and new conversion rate.",
     related: ["conversion-rate-calculator", "roas-calculator", "cpc-calculator"],
   },
-    {
+  {
     slug: "amazon-fba-fee-calculator",
     name: "Amazon FBA Fee Calculator",
     category: "ecommerce",
@@ -258,7 +259,7 @@ export const tools: Tool[] = [
     description: "Calculate sales tax amount and total price including tax.",
     related: ["vat-calculator", "product-price-calculator", "discount-calculator"],
   },
-    {
+  {
     slug: "break-even-revenue-calculator",
     name: "Break-Even Revenue Calculator",
     category: "business",
@@ -286,7 +287,7 @@ export const tools: Tool[] = [
     description: "Calculate percentage increase or decrease between two values.",
     related: ["percentage-calculator", "revenue-growth-calculator", "price-elasticity-calculator"],
   },
-    {
+  {
     slug: "employee-cost-calculator",
     name: "Employee Cost Calculator",
     category: "business",
@@ -321,7 +322,7 @@ export const tools: Tool[] = [
     description: "Calculate the time needed to recover an initial investment.",
     related: ["investment-return-calculator", "roi-calculator", "loan-interest-calculator"],
   },
-    {
+  {
     slug: "saas-mrr-calculator",
     name: "SaaS MRR Calculator",
     category: "business",
@@ -357,10 +358,186 @@ export const tools: Tool[] = [
     related: ["loan-payment-calculator", "loan-interest-calculator", "payback-period-calculator"],
   },
   {
-  slug: "percentage-calculator",
-  name: "Percentage Calculator",
-  category: "business",
-  description: "Calculate what percentage one number is of another.",
-  related: ["discount-calculator", "conversion-rate-calculator", "revenue-growth-calculator"],
+    slug: "percentage-calculator",
+    name: "Percentage Calculator",
+    category: "business",
+    description: "Calculate what percentage one number is of another.",
+    related: ["discount-calculator", "conversion-rate-calculator", "revenue-growth-calculator"],
+  },
+
+  {
+    slug: "break-even-units-calculator",
+    name: "Break-Even Units Calculator",
+    category: "pricing",
+    description: "Calculate how many units you need to sell to cover fixed costs.",
+    related: ["break-even-calculator", "contribution-margin-calculator", "break-even-revenue-calculator"],
+  },
+  {
+    slug: "wholesale-price-calculator",
+    name: "Wholesale Price Calculator",
+    category: "pricing",
+    description: "Calculate wholesale price based on cost per unit and markup percentage.",
+    related: ["markup-calculator", "retail-margin-calculator", "product-price-calculator"],
+  },
+  {
+    slug: "retail-margin-calculator",
+    name: "Retail Margin Calculator",
+    category: "pricing",
+    description: "Calculate retail margin based on selling price and cost per unit.",
+    related: ["profit-margin-calculator", "wholesale-price-calculator", "markup-calculator"],
+  },
+  {
+    slug: "keystone-pricing-calculator",
+    name: "Keystone Pricing Calculator",
+    category: "pricing",
+    description: "Calculate keystone price by doubling cost per unit.",
+    related: ["markup-calculator", "retail-margin-calculator", "product-price-calculator"],
+  },
+  {
+    slug: "bundle-pricing-calculator",
+    name: "Bundle Pricing Calculator",
+    category: "pricing",
+    description: "Calculate bundle price based on total item prices and bundle discount percentage.",
+    related: ["discount-calculator", "product-price-calculator", "average-order-value-calculator"],
+  },
+  {
+    slug: "upsell-revenue-calculator",
+    name: "Upsell Revenue Calculator",
+    category: "sales",
+    description: "Calculate upsell revenue based on orders, upsell take rate, and upsell value.",
+    related: ["cross-sell-revenue-calculator", "average-order-value-calculator", "revenue-calculator"],
+  },
+  {
+    slug: "cross-sell-revenue-calculator",
+    name: "Cross-Sell Revenue Calculator",
+    category: "sales",
+    description: "Calculate cross-sell revenue based on orders, cross-sell take rate, and cross-sell value.",
+    related: ["upsell-revenue-calculator", "average-order-value-calculator", "revenue-calculator"],
+  },
+  {
+    slug: "subscription-price-calculator",
+    name: "Subscription Price Calculator",
+    category: "pricing",
+    description: "Calculate a suggested subscription price based on monthly cost per customer and target margin.",
+    related: ["saas-mrr-calculator", "desired-margin-price-calculator", "minimum-profitable-price-calculator"],
+  },
+  {
+    slug: "minimum-profitable-price-calculator",
+    name: "Minimum Profitable Price Calculator",
+    category: "pricing",
+    description: "Calculate the minimum profitable price based on cost, fees, and desired profit per unit.",
+    related: ["desired-margin-price-calculator", "product-price-calculator", "profit-margin-calculator"],
+  },
+  {
+    slug: "desired-margin-price-calculator",
+    name: "Desired Margin Price Calculator",
+    category: "pricing",
+    description: "Calculate required selling price based on cost per unit and desired margin.",
+    related: ["minimum-profitable-price-calculator", "markup-calculator", "profit-margin-calculator"],
+  },
+  {
+    slug: "price-increase-impact-calculator",
+    name: "Price Increase Impact Calculator",
+    category: "pricing",
+    description: "Estimate additional monthly revenue from increasing price across monthly units sold.",
+    related: ["revenue-growth-calculator", "profit-calculator", "price-elasticity-calculator"],
+  },
+  {
+    slug: "channel-margin-calculator",
+    name: "Channel Margin Calculator",
+    category: "pricing",
+    description: "Calculate channel margin based on selling price, cost per unit, and channel fees.",
+    related: ["profit-margin-calculator", "product-price-calculator", "shopify-fee-calculator"],
+  },
+  {
+    slug: "reseller-discount-calculator",
+    name: "Reseller Discount Calculator",
+    category: "pricing",
+    description: "Calculate reseller price from retail price and reseller discount percentage.",
+    related: ["discount-calculator", "wholesale-price-calculator", "retail-margin-calculator"],
+  },
+  {
+    slug: "quote-calculator",
+    name: "Quote Calculator",
+    category: "sales",
+    description: "Calculate a quote total based on hours, hourly rate, and extra costs.",
+    related: ["hourly-rate-calculator", "commission-calculator", "sales-tax-calculator"],
+  },
+  {
+    slug: "deal-size-calculator",
+    name: "Deal Size Calculator",
+    category: "sales",
+    description: "Calculate deal size based on units and price per unit.",
+    related: ["average-order-value-calculator", "revenue-calculator", "commission-calculator"],
+  },
+  {
+    slug: "cpa-calculator",
+    name: "CPA Calculator",
+    category: "marketing",
+    description: "Calculate cost per acquisition based on ad spend and acquisitions.",
+    related: ["cac-calculator", "cpc-to-cpa-calculator", "roas-calculator"],
+  },
+  {
+    slug: "ctr-calculator",
+    name: "CTR Calculator",
+    category: "marketing",
+    description: "Calculate click-through rate based on clicks and impressions.",
+    related: ["cpm-calculator", "clicks-calculator", "impressions-calculator"],
+  },
+  {
+    slug: "impressions-calculator",
+    name: "Impressions Calculator",
+    category: "marketing",
+    description: "Estimate impressions based on ad spend and CPM.",
+    related: ["cpm-calculator", "ctr-calculator", "clicks-calculator"],
+  },
+  {
+    slug: "clicks-calculator",
+    name: "Clicks Calculator",
+    category: "marketing",
+    description: "Estimate clicks based on impressions and click-through rate.",
+    related: ["ctr-calculator", "cpc-calculator", "impressions-calculator"],
+  },
+  {
+    slug: "lead-to-customer-rate-calculator",
+    name: "Lead-to-Customer Rate Calculator",
+    category: "marketing",
+    description: "Calculate lead-to-customer conversion rate based on customers and leads.",
+    related: ["conversion-rate-calculator", "cost-per-lead-calculator", "cac-calculator"],
+  },
+  {
+    slug: "cost-per-lead-calculator",
+    name: "Cost Per Lead Calculator",
+    category: "marketing",
+    description: "Calculate cost per lead based on campaign spend and number of leads.",
+    related: ["cac-calculator", "lead-to-customer-rate-calculator", "cpc-calculator"],
+  },
+  {
+    slug: "email-open-rate-calculator",
+    name: "Email Open Rate Calculator",
+    category: "marketing",
+    description: "Calculate email open rate based on opens and delivered emails.",
+    related: ["email-click-rate-calculator", "unsubscribe-rate-calculator", "conversion-rate-calculator"],
+  },
+  {
+    slug: "email-click-rate-calculator",
+    name: "Email Click Rate Calculator",
+    category: "marketing",
+    description: "Calculate email click rate based on clicks and delivered emails.",
+    related: ["email-open-rate-calculator", "unsubscribe-rate-calculator", "conversion-rate-calculator"],
+  },
+  {
+    slug: "unsubscribe-rate-calculator",
+    name: "Unsubscribe Rate Calculator",
+    category: "marketing",
+    description: "Calculate unsubscribe rate based on unsubscribes and delivered emails.",
+    related: ["email-open-rate-calculator", "email-click-rate-calculator", "conversion-rate-calculator"],
+  },
+  {
+    slug: "cart-abandonment-rate-calculator",
+    name: "Cart Abandonment Rate Calculator",
+    category: "marketing",
+    description: "Calculate cart abandonment rate based on completed orders and shopping carts created.",
+    related: ["conversion-rate-calculator", "average-order-value-calculator", "revenue-calculator"],
   },
 ];

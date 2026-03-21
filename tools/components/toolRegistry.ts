@@ -1,5 +1,4 @@
 import type { ComponentType } from "react";
-
 import ProfitMarginCalculator from "@/tools/components/ProfitMarginCalculator";
 import MarkupCalculator from "@/tools/components/MarkupCalculator";
 import DiscountCalculator from "@/tools/components/DiscountCalculator";
@@ -51,6 +50,32 @@ import LoanInterestCalculator from "@/tools/components/LoanInterestCalculator";
 import InvestmentReturnCalculator from "@/tools/components/InvestmentReturnCalculator";
 import AmortizationCalculator from "@/tools/components/AmortizationCalculator";
 
+import BreakEvenUnitsCalculator from "@/tools/components/BreakEvenUnitsCalculator";
+import WholesalePriceCalculator from "@/tools/components/WholesalePriceCalculator";
+import RetailMarginCalculator from "@/tools/components/RetailMarginCalculator";
+import KeystonePricingCalculator from "@/tools/components/KeystonePricingCalculator";
+import BundlePricingCalculator from "@/tools/components/BundlePricingCalculator";
+import UpsellRevenueCalculator from "@/tools/components/UpsellRevenueCalculator";
+import CrossSellRevenueCalculator from "@/tools/components/CrossSellRevenueCalculator";
+import SubscriptionPriceCalculator from "@/tools/components/SubscriptionPriceCalculator";
+import MinimumProfitablePriceCalculator from "@/tools/components/MinimumProfitablePriceCalculator";
+import DesiredMarginPriceCalculator from "@/tools/components/DesiredMarginPriceCalculator";
+import PriceIncreaseImpactCalculator from "@/tools/components/PriceIncreaseImpactCalculator";
+import ChannelMarginCalculator from "@/tools/components/ChannelMarginCalculator";
+import ResellerDiscountCalculator from "@/tools/components/ResellerDiscountCalculator";
+import QuoteCalculator from "@/tools/components/QuoteCalculator";
+import DealSizeCalculator from "@/tools/components/DealSizeCalculator";
+import CpaCalculator from "@/tools/components/CpaCalculator";
+import CtrCalculator from "@/tools/components/CtrCalculator";
+import ImpressionsCalculator from "@/tools/components/ImpressionsCalculator";
+import ClicksCalculator from "@/tools/components/ClicksCalculator";
+import LeadToCustomerRateCalculator from "@/tools/components/LeadToCustomerRateCalculator";
+import CostPerLeadCalculator from "@/tools/components/CostPerLeadCalculator";
+import EmailOpenRateCalculator from "@/tools/components/EmailOpenRateCalculator";
+import EmailClickRateCalculator from "@/tools/components/EmailClickRateCalculator";
+import UnsubscribeRateCalculator from "@/tools/components/UnsubscribeRateCalculator";
+import CartAbandonmentRateCalculator from "@/tools/components/CartAbandonmentRateCalculator";
+
 export const toolRegistry: Record<string, ComponentType> = {
   "profit-margin-calculator": ProfitMarginCalculator,
   "markup-calculator": MarkupCalculator,
@@ -101,5 +126,31 @@ export const toolRegistry: Record<string, ComponentType> = {
   "loan-interest-calculator": LoanInterestCalculator,
   "investment-return-calculator": InvestmentReturnCalculator,
   "amortization-calculator": AmortizationCalculator,
-  "percentage-calculator": PercentageCalculator, 
+  "percentage-calculator": PercentageCalculator,
+
+  "break-even-units-calculator": BreakEvenUnitsCalculator,
+  "wholesale-price-calculator": WholesalePriceCalculator,
+  "retail-margin-calculator": RetailMarginCalculator,
+  "keystone-pricing-calculator": KeystonePricingCalculator,
+  "bundle-pricing-calculator": BundlePricingCalculator,
+  "upsell-revenue-calculator": UpsellRevenueCalculator,
+  "cross-sell-revenue-calculator": CrossSellRevenueCalculator,
+  "subscription-price-calculator": SubscriptionPriceCalculator,
+  "minimum-profitable-price-calculator": MinimumProfitablePriceCalculator,
+  "desired-margin-price-calculator": DesiredMarginPriceCalculator,
+  "price-increase-impact-calculator": PriceIncreaseImpactCalculator,
+  "channel-margin-calculator": ChannelMarginCalculator,
+  "reseller-discount-calculator": ResellerDiscountCalculator,
+  "quote-calculator": QuoteCalculator,
+  "deal-size-calculator": DealSizeCalculator,
+  "cpa-calculator": CpaCalculator,
+  "ctr-calculator": CtrCalculator,
+  "impressions-calculator": ImpressionsCalculator,
+  "clicks-calculator": ClicksCalculator,
+  "lead-to-customer-rate-calculator": LeadToCustomerRateCalculator,
+  "cost-per-lead-calculator": CostPerLeadCalculator,
+  "email-open-rate-calculator": EmailOpenRateCalculator,
+  "email-click-rate-calculator": EmailClickRateCalculator,
+  "unsubscribe-rate-calculator": UnsubscribeRateCalculator,
+  "cart-abandonment-rate-calculator": CartAbandonmentRateCalculator,
 };

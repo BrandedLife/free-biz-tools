@@ -75,13 +75,16 @@ export default async function ToolPage({
     notFound();
   }
 
+  const CalculatorComponent = toolRegistry[slug];
   const content = getToolContent(slug);
 
-  if (!content) {
-    notFound();
-  }
+  console.log("TOOL PAGE DEBUG", {
+    slug,
+    hasTool: !!tool,
+    hasCalculator: !!CalculatorComponent,
+    hasContent: !!content,
+  });
 
-  const CalculatorComponent = toolRegistry[slug];
   const fullUrl = `${BASE_URL}/tools/${tool.slug}`;
 
   const schema = {
@@ -140,7 +143,7 @@ export default async function ToolPage({
           <CalculatorComponent />
         ) : (
           <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
-            <p className="text-slate-600">Calculator UI coming next.</p>
+            <p className="text-slate-600">Calculator UI coming soon.</p>
           </div>
         )}
       </section>
@@ -152,7 +155,14 @@ export default async function ToolPage({
         </div>
 
         <div className="prose prose-slate max-w-none">
-          <MdxContent source={content} />
+          {content ? (
+            <MdxContent source={content} />
+          ) : (
+            <p>
+              This calculator is ready to use. A full written guide for this tool
+              is coming soon.
+            </p>
+          )}
         </div>
       </section>
 
