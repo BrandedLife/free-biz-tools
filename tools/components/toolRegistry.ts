@@ -120,6 +120,27 @@ import SaasLtvCacRatioCalculator from "@/tools/components/SaasLtvCacRatioCalcula
 import ArpuCalculator from "@/tools/components/ArpuCalculator";
 import ArpaCalculator from "@/tools/components/ArpaCalculator";
 import NetRevenueRetentionCalculator from "@/tools/components/NetRevenueRetentionCalculator";
+import GrossProfitCalculator from "@/tools/components/GrossProfitCalculator";
+import OperatingMarginCalculator from "@/tools/components/OperatingMarginCalculator";
+import NetMarginCalculator from "@/tools/components/NetMarginCalculator";
+import FreeCashFlowCalculator from "@/tools/components/FreeCashFlowCalculator";
+import BurnRateCalculator from "@/tools/components/BurnRateCalculator";
+import CashRunwayCalculator from "@/tools/components/CashRunwayCalculator";
+import CustomerPaybackPeriodCalculator from "@/tools/components/CustomerPaybackPeriodCalculator";
+import MonthlyGrowthRateCalculator from "@/tools/components/MonthlyGrowthRateCalculator";
+import AnnualGrowthRateCalculator from "@/tools/components/AnnualGrowthRateCalculator";
+import RevenuePerEmployeeCalculator from "@/tools/components/RevenuePerEmployeeCalculator";
+import BreakEvenCpcCalculator from "@/tools/components/BreakEvenCpcCalculator";
+import MerCalculator from "@/tools/components/MerCalculator";
+import BlendedCacCalculator from "@/tools/components/BlendedCacCalculator";
+import SellThroughRateCalculator from "@/tools/components/SellThroughRateCalculator";
+import InventoryToSalesRatioCalculator from "@/tools/components/InventoryToSalesRatioCalculator";
+import PurchaseFrequencyCalculator from "@/tools/components/PurchaseFrequencyCalculator";
+import CustomerConcentrationCalculator from "@/tools/components/CustomerConcentrationCalculator";
+import SalesVelocityCalculator from "@/tools/components/SalesVelocityCalculator";
+import RevenueForecastCalculator from "@/tools/components/RevenueForecastCalculator";
+import RevenuePerSessionCalculator from "@/tools/components/RevenuePerSessionCalculator";
+import CartRecoveryRevenueCalculator from "@/tools/components/CartRecoveryRevenueCalculator";
 
 export const toolRegistry: Record<string, ComponentType> = {
   "profit-margin-calculator": ProfitMarginCalculator,
@@ -242,4 +263,25 @@ export const toolRegistry: Record<string, ComponentType> = {
   "arpu-calculator": ArpuCalculator,
   "arpa-calculator": ArpaCalculator,
   "net-revenue-retention-calculator": NetRevenueRetentionCalculator,
+  "gross-profit-calculator": GrossProfitCalculator,
+  "operating-margin-calculator": OperatingMarginCalculator,
+  "net-margin-calculator": NetMarginCalculator,
+  "free-cash-flow-calculator": FreeCashFlowCalculator,
+  "burn-rate-calculator": BurnRateCalculator,
+  "cash-runway-calculator": CashRunwayCalculator,
+  "customer-payback-period-calculator": CustomerPaybackPeriodCalculator,
+  "monthly-growth-rate-calculator": MonthlyGrowthRateCalculator,
+  "annual-growth-rate-calculator": AnnualGrowthRateCalculator,
+  "revenue-per-employee-calculator": RevenuePerEmployeeCalculator,
+  "break-even-cpc-calculator": BreakEvenCpcCalculator,
+  "mer-calculator": MerCalculator,
+  "blended-cac-calculator": BlendedCacCalculator,
+  "sell-through-rate-calculator": SellThroughRateCalculator,
+  "inventory-to-sales-ratio-calculator": InventoryToSalesRatioCalculator,
+  "purchase-frequency-calculator": PurchaseFrequencyCalculator,
+  "customer-concentration-calculator": CustomerConcentrationCalculator,
+  "sales-velocity-calculator": SalesVelocityCalculator,
+  "revenue-forecast-calculator": RevenueForecastCalculator,
+  "revenue-per-session-calculator": RevenuePerSessionCalculator,
+  "cart-recovery-revenue-calculator": CartRecoveryRevenueCalculator,
 };
