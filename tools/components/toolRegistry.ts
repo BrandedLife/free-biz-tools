@@ -87,6 +87,19 @@ import NetSalesCalculator from "@/tools/components/NetSalesCalculator";
 import MarketplaceFeeCalculator from "@/tools/components/MarketplaceFeeCalculator";
 import EtsyFeeCalculator from "@/tools/components/EtsyFeeCalculator";
 import EbayFeeCalculator from "@/tools/components/EbayFeeCalculator";
+import TikTokShopFeeCalculator from "@/tools/components/TikTokShopFeeCalculator";
+import TakealotFeeCalculator from "@/tools/components/TakealotFeeCalculator";
+import TemuFeeCalculator from "@/tools/components/TemuFeeCalculator";
+import ProductBundleProfitCalculator from "@/tools/components/ProductBundleProfitCalculator";
+import ReorderPointCalculator from "@/tools/components/ReorderPointCalculator";
+import SafetyStockCalculator from "@/tools/components/SafetyStockCalculator";
+import DaysSalesInInventoryCalculator from "@/tools/components/DaysSalesInInventoryCalculator";
+import StockoutCostCalculator from "@/tools/components/StockoutCostCalculator";
+import InventoryCarryingCostCalculator from "@/tools/components/InventoryCarryingCostCalculator";
+import WarehouseSpaceCalculator from "@/tools/components/WarehouseSpaceCalculator";
+import FulfillmentCostCalculator from "@/tools/components/FulfillmentCostCalculator";
+import PickingPackingCostCalculator from "@/tools/components/PickingPackingCostCalculator";
+import OrderFillRateCalculator from "@/tools/components/OrderFillRateCalculator";
 
 export const toolRegistry: Record<string, ComponentType> = {
   "profit-margin-calculator": ProfitMarginCalculator,
@@ -177,4 +190,17 @@ export const toolRegistry: Record<string, ComponentType> = {
   "marketplace-fee-calculator": MarketplaceFeeCalculator,
   "etsy-fee-calculator": EtsyFeeCalculator,
   "ebay-fee-calculator": EbayFeeCalculator,
+  "tiktok-shop-fee-calculator": TikTokShopFeeCalculator,
+  "takealot-fee-calculator": TakealotFeeCalculator,
+  "temu-fee-calculator": TemuFeeCalculator,
+  "product-bundle-profit-calculator": ProductBundleProfitCalculator,
+  "reorder-point-calculator": ReorderPointCalculator,
+  "safety-stock-calculator": SafetyStockCalculator,
+  "days-sales-in-inventory-calculator": DaysSalesInInventoryCalculator,
+  "stockout-cost-calculator": StockoutCostCalculator,
+  "inventory-carrying-cost-calculator": InventoryCarryingCostCalculator,
+  "warehouse-space-calculator": WarehouseSpaceCalculator,
+  "fulfillment-cost-calculator": FulfillmentCostCalculator,
+  "picking-packing-cost-calculator": PickingPackingCostCalculator,
+  "order-fill-rate-calculator": OrderFillRateCalculator,
 };
