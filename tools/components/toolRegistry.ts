@@ -100,6 +100,16 @@ import WarehouseSpaceCalculator from "@/tools/components/WarehouseSpaceCalculato
 import FulfillmentCostCalculator from "@/tools/components/FulfillmentCostCalculator";
 import PickingPackingCostCalculator from "@/tools/components/PickingPackingCostCalculator";
 import OrderFillRateCalculator from "@/tools/components/OrderFillRateCalculator";
+import CashFlowCalculator from "@/tools/components/CashFlowCalculator";
+import OperatingProfitCalculator from "@/tools/components/OperatingProfitCalculator";
+import EbitdaCalculator from "@/tools/components/EbitdaCalculator";
+import DepreciationCalculator from "@/tools/components/DepreciationCalculator";
+import WorkingCapitalCalculator from "@/tools/components/WorkingCapitalCalculator";
+import CurrentRatioCalculator from "@/tools/components/CurrentRatioCalculator";
+import QuickRatioCalculator from "@/tools/components/QuickRatioCalculator";
+import DebtToEquityCalculator from "@/tools/components/DebtToEquityCalculator";
+import InterestCoverageRatioCalculator from "@/tools/components/InterestCoverageRatioCalculator";
+import NpvCalculator from "@/tools/components/NpvCalculator";
 
 export const toolRegistry: Record<string, ComponentType> = {
   "profit-margin-calculator": ProfitMarginCalculator,
@@ -152,7 +162,6 @@ export const toolRegistry: Record<string, ComponentType> = {
   "investment-return-calculator": InvestmentReturnCalculator,
   "amortization-calculator": AmortizationCalculator,
   "percentage-calculator": PercentageCalculator,
-
   "break-even-units-calculator": BreakEvenUnitsCalculator,
   "wholesale-price-calculator": WholesalePriceCalculator,
   "retail-margin-calculator": RetailMarginCalculator,
@@ -203,4 +212,14 @@ export const toolRegistry: Record<string, ComponentType> = {
   "fulfillment-cost-calculator": FulfillmentCostCalculator,
   "picking-packing-cost-calculator": PickingPackingCostCalculator,
   "order-fill-rate-calculator": OrderFillRateCalculator,
+  "cash-flow-calculator": CashFlowCalculator,
+  "operating-profit-calculator": OperatingProfitCalculator,
+  "ebitda-calculator": EbitdaCalculator,
+  "depreciation-calculator": DepreciationCalculator,
+  "working-capital-calculator": WorkingCapitalCalculator,
+  "current-ratio-calculator": CurrentRatioCalculator,
+  "quick-ratio-calculator": QuickRatioCalculator,
+  "debt-to-equity-calculator": DebtToEquityCalculator,
+  "interest-coverage-ratio-calculator": InterestCoverageRatioCalculator,
+  "npv-calculator": NpvCalculator,
 };
