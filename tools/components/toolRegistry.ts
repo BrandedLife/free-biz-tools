@@ -75,6 +75,18 @@ import EmailOpenRateCalculator from "@/tools/components/EmailOpenRateCalculator"
 import EmailClickRateCalculator from "@/tools/components/EmailClickRateCalculator";
 import UnsubscribeRateCalculator from "@/tools/components/UnsubscribeRateCalculator";
 import CartAbandonmentRateCalculator from "@/tools/components/CartAbandonmentRateCalculator";
+import RemarketingRoiCalculator from "@/tools/components/RemarketingRoiCalculator";
+import LeadValueCalculator from "@/tools/components/LeadValueCalculator";
+import FunnelConversionCalculator from "@/tools/components/FunnelConversionCalculator";
+import LandingPageConversionCalculator from "@/tools/components/LandingPageConversionCalculator";
+import AdFrequencyCalculator from "@/tools/components/AdFrequencyCalculator";
+import EcommerceConversionFunnelCalculator from "@/tools/components/EcommerceConversionFunnelCalculator";
+import RefundRateCalculator from "@/tools/components/RefundRateCalculator";
+import ReturnRateCalculator from "@/tools/components/ReturnRateCalculator";
+import NetSalesCalculator from "@/tools/components/NetSalesCalculator";
+import MarketplaceFeeCalculator from "@/tools/components/MarketplaceFeeCalculator";
+import EtsyFeeCalculator from "@/tools/components/EtsyFeeCalculator";
+import EbayFeeCalculator from "@/tools/components/EbayFeeCalculator";
 
 export const toolRegistry: Record<string, ComponentType> = {
   "profit-margin-calculator": ProfitMarginCalculator,
@@ -153,4 +165,16 @@ export const toolRegistry: Record<string, ComponentType> = {
   "email-click-rate-calculator": EmailClickRateCalculator,
   "unsubscribe-rate-calculator": UnsubscribeRateCalculator,
   "cart-abandonment-rate-calculator": CartAbandonmentRateCalculator,
+  "remarketing-roi-calculator": RemarketingRoiCalculator,
+  "lead-value-calculator": LeadValueCalculator,
+  "funnel-conversion-calculator": FunnelConversionCalculator,
+  "landing-page-conversion-calculator": LandingPageConversionCalculator,
+  "ad-frequency-calculator": AdFrequencyCalculator,
+  "ecommerce-conversion-funnel-calculator": EcommerceConversionFunnelCalculator,
+  "refund-rate-calculator": RefundRateCalculator,
+  "return-rate-calculator": ReturnRateCalculator,
+  "net-sales-calculator": NetSalesCalculator,
+  "marketplace-fee-calculator": MarketplaceFeeCalculator,
+  "etsy-fee-calculator": EtsyFeeCalculator,
+  "ebay-fee-calculator": EbayFeeCalculator,
 };
