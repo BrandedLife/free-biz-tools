@@ -110,6 +110,16 @@ import QuickRatioCalculator from "@/tools/components/QuickRatioCalculator";
 import DebtToEquityCalculator from "@/tools/components/DebtToEquityCalculator";
 import InterestCoverageRatioCalculator from "@/tools/components/InterestCoverageRatioCalculator";
 import NpvCalculator from "@/tools/components/NpvCalculator";
+import IrrCalculator from "@/tools/components/IrrCalculator";
+import DiscountRateCalculator from "@/tools/components/DiscountRateCalculator";
+import InvoiceDiscountingCalculator from "@/tools/components/InvoiceDiscountingCalculator";
+import AccountsReceivableTurnoverCalculator from "@/tools/components/AccountsReceivableTurnoverCalculator";
+import AccountsPayableDaysCalculator from "@/tools/components/AccountsPayableDaysCalculator";
+import ChurnRateCalculator from "@/tools/components/ChurnRateCalculator";
+import SaasLtvCacRatioCalculator from "@/tools/components/SaasLtvCacRatioCalculator";
+import ArpuCalculator from "@/tools/components/ArpuCalculator";
+import ArpaCalculator from "@/tools/components/ArpaCalculator";
+import NetRevenueRetentionCalculator from "@/tools/components/NetRevenueRetentionCalculator";
 
 export const toolRegistry: Record<string, ComponentType> = {
   "profit-margin-calculator": ProfitMarginCalculator,
@@ -222,4 +232,14 @@ export const toolRegistry: Record<string, ComponentType> = {
   "debt-to-equity-calculator": DebtToEquityCalculator,
   "interest-coverage-ratio-calculator": InterestCoverageRatioCalculator,
   "npv-calculator": NpvCalculator,
+  "irr-calculator": IrrCalculator,
+  "discount-rate-calculator": DiscountRateCalculator,
+  "invoice-discounting-calculator": InvoiceDiscountingCalculator,
+  "accounts-receivable-turnover-calculator": AccountsReceivableTurnoverCalculator,
+  "accounts-payable-days-calculator": AccountsPayableDaysCalculator,
+  "churn-rate-calculator": ChurnRateCalculator,
+  "saas-ltv-cac-ratio-calculator": SaasLtvCacRatioCalculator,
+  "arpu-calculator": ArpuCalculator,
+  "arpa-calculator": ArpaCalculator,
+  "net-revenue-retention-calculator": NetRevenueRetentionCalculator,
 };

@@ -1,0 +1,96 @@
+Use this calculator to estimate discount rate.
+
+## What this calculator does
+
+The discount rate calculator helps estimate the annual rate connecting present value to future value over time.
+
+It is useful for:
+
+- valuation work
+- investment analysis
+- planning assumptions
+- financial modelling
+
+## Formula
+
+**Discount Rate = (Future Value ÷ Present Value)^(1 ÷ Years) - 1**
+
+Where:
+
+- **Future Value** = value in the future
+- **Present Value** = value today
+- **Years** = time period
+- **Discount Rate** = annual rate of change
+
+## Example calculation
+
+If:
+
+- Future value = **150000**
+- Present value = **100000**
+- Years = **3**
+
+Then:
+
+- Discount rate = **(150000 ÷ 100000)^(1 ÷ 3) - 1**
+- Discount rate = **14.47%**
+
+## What is discount rate?
+
+Discount rate is the rate used to convert future value into present value or compare value across time.
+
+## Why discount rate matters
+
+This calculation helps businesses:
+
+- build valuation models
+- assess investments
+- compare time-based values
+- support budgeting assumptions
+
+## When to use this calculator
+
+Use this calculator when you want to:
+
+- back into an annualized rate
+- compare present and future value
+- support valuation decisions
+- analyse investment growth assumptions
+
+## Common mistakes
+
+Common mistakes include:
+
+- mixing nominal and real values
+- using the wrong time period
+- confusing growth rate and discount rate
+- comparing unlike cash flow assumptions
+
+## Discount rate vs IRR
+
+These are closely related.
+
+- **Discount rate** is an input assumption
+- **IRR** is an output return metric
+
+## Related calculations
+
+You may also want to use:
+
+- IRR Calculator
+- NPV Calculator
+- Investment Return Calculator
+
+## FAQs
+
+### What does this calculator do?
+
+It helps you estimate discount rate from present and future value.
+
+### Why is discount rate important?
+
+It helps connect value across time and supports financial modelling.
+
+### Is discount rate always the same as required return?
+
+Not always. It depends on the context and assumptions being used.
