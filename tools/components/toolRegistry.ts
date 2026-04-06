@@ -1,287 +1,150 @@
 import type { ComponentType } from "react";
-import ProfitMarginCalculator from "@/tools/components/ProfitMarginCalculator";
-import MarkupCalculator from "@/tools/components/MarkupCalculator";
-import DiscountCalculator from "@/tools/components/DiscountCalculator";
-import BreakEvenCalculator from "@/tools/components/BreakEvenCalculator";
-import GrossMarginCalculator from "@/tools/components/GrossMarginCalculator";
-import ProfitCalculator from "@/tools/components/ProfitCalculator";
-import RevenueCalculator from "@/tools/components/RevenueCalculator";
-import ShopifyFeeCalculator from "@/tools/components/ShopifyFeeCalculator";
-import StripeFeeCalculator from "@/tools/components/StripeFeeCalculator";
-import PayPalFeeCalculator from "@/tools/components/PayPalFeeCalculator";
-import VatCalculator from "@/tools/components/VatCalculator";
-import ProductPriceCalculator from "@/tools/components/ProductPriceCalculator";
-import RoasCalculator from "@/tools/components/RoasCalculator";
-import ConversionRateCalculator from "@/tools/components/ConversionRateCalculator";
-import CacCalculator from "@/tools/components/CacCalculator";
-import CpcCalculator from "@/tools/components/CpcCalculator";
-import CpmCalculator from "@/tools/components/CpmCalculator";
-import LoanPaymentCalculator from "@/tools/components/LoanPaymentCalculator";
-import CompoundInterestCalculator from "@/tools/components/CompoundInterestCalculator";
-import RoiCalculator from "@/tools/components/RoiCalculator";
-import NetProfitCalculator from "@/tools/components/NetProfitCalculator";
-import ContributionMarginCalculator from "@/tools/components/ContributionMarginCalculator";
-import CostPerUnitCalculator from "@/tools/components/CostPerUnitCalculator";
-import TargetProfitCalculator from "@/tools/components/TargetProfitCalculator";
-import UnitPriceCalculator from "@/tools/components/UnitPriceCalculator";
-import LtvCalculator from "@/tools/components/LtvCalculator";
-import MarketingRoiCalculator from "@/tools/components/MarketingRoiCalculator";
-import CpmToCpcCalculator from "@/tools/components/CpmToCpcCalculator";
-import CpcToCpaCalculator from "@/tools/components/CpcToCpaCalculator";
-import ConversionRateImprovementCalculator from "@/tools/components/ConversionRateImprovementCalculator";
-import AmazonFbaFeeCalculator from "@/tools/components/AmazonFbaFeeCalculator";
-import ShippingProfitCalculator from "@/tools/components/ShippingProfitCalculator";
-import InventoryTurnoverCalculator from "@/tools/components/InventoryTurnoverCalculator";
-import AverageOrderValueCalculator from "@/tools/components/AverageOrderValueCalculator";
-import SalesTaxCalculator from "@/tools/components/SalesTaxCalculator";
-import BreakEvenRevenueCalculator from "@/tools/components/BreakEvenRevenueCalculator";
-import RevenueGrowthCalculator from "@/tools/components/RevenueGrowthCalculator";
-import PriceElasticityCalculator from "@/tools/components/PriceElasticityCalculator";
-import PercentageCalculator from "@/tools/components/PercentageCalculator";
-import PercentageChangeCalculator from "@/tools/components/PercentageChangeCalculator";
-import EmployeeCostCalculator from "@/tools/components/EmployeeCostCalculator";
-import HourlyRateCalculator from "@/tools/components/HourlyRateCalculator";
-import ContractorRateCalculator from "@/tools/components/ContractorRateCalculator";
-import CommissionCalculator from "@/tools/components/CommissionCalculator";
-import PaybackPeriodCalculator from "@/tools/components/PaybackPeriodCalculator";
-import SaasMrrCalculator from "@/tools/components/SaasMrrCalculator";
-import SaasArrCalculator from "@/tools/components/SaasArrCalculator";
-import LoanInterestCalculator from "@/tools/components/LoanInterestCalculator";
-import InvestmentReturnCalculator from "@/tools/components/InvestmentReturnCalculator";
-import AmortizationCalculator from "@/tools/components/AmortizationCalculator";
+import dynamic from "next/dynamic";
 
-import BreakEvenUnitsCalculator from "@/tools/components/BreakEvenUnitsCalculator";
-import WholesalePriceCalculator from "@/tools/components/WholesalePriceCalculator";
-import RetailMarginCalculator from "@/tools/components/RetailMarginCalculator";
-import KeystonePricingCalculator from "@/tools/components/KeystonePricingCalculator";
-import BundlePricingCalculator from "@/tools/components/BundlePricingCalculator";
-import UpsellRevenueCalculator from "@/tools/components/UpsellRevenueCalculator";
-import CrossSellRevenueCalculator from "@/tools/components/CrossSellRevenueCalculator";
-import SubscriptionPriceCalculator from "@/tools/components/SubscriptionPriceCalculator";
-import MinimumProfitablePriceCalculator from "@/tools/components/MinimumProfitablePriceCalculator";
-import DesiredMarginPriceCalculator from "@/tools/components/DesiredMarginPriceCalculator";
-import PriceIncreaseImpactCalculator from "@/tools/components/PriceIncreaseImpactCalculator";
-import ChannelMarginCalculator from "@/tools/components/ChannelMarginCalculator";
-import ResellerDiscountCalculator from "@/tools/components/ResellerDiscountCalculator";
-import QuoteCalculator from "@/tools/components/QuoteCalculator";
-import DealSizeCalculator from "@/tools/components/DealSizeCalculator";
-import CpaCalculator from "@/tools/components/CpaCalculator";
-import CtrCalculator from "@/tools/components/CtrCalculator";
-import ImpressionsCalculator from "@/tools/components/ImpressionsCalculator";
-import ClicksCalculator from "@/tools/components/ClicksCalculator";
-import LeadToCustomerRateCalculator from "@/tools/components/LeadToCustomerRateCalculator";
-import CostPerLeadCalculator from "@/tools/components/CostPerLeadCalculator";
-import EmailOpenRateCalculator from "@/tools/components/EmailOpenRateCalculator";
-import EmailClickRateCalculator from "@/tools/components/EmailClickRateCalculator";
-import UnsubscribeRateCalculator from "@/tools/components/UnsubscribeRateCalculator";
-import CartAbandonmentRateCalculator from "@/tools/components/CartAbandonmentRateCalculator";
-import RemarketingRoiCalculator from "@/tools/components/RemarketingRoiCalculator";
-import LeadValueCalculator from "@/tools/components/LeadValueCalculator";
-import FunnelConversionCalculator from "@/tools/components/FunnelConversionCalculator";
-import LandingPageConversionCalculator from "@/tools/components/LandingPageConversionCalculator";
-import AdFrequencyCalculator from "@/tools/components/AdFrequencyCalculator";
-import EcommerceConversionFunnelCalculator from "@/tools/components/EcommerceConversionFunnelCalculator";
-import RefundRateCalculator from "@/tools/components/RefundRateCalculator";
-import ReturnRateCalculator from "@/tools/components/ReturnRateCalculator";
-import NetSalesCalculator from "@/tools/components/NetSalesCalculator";
-import MarketplaceFeeCalculator from "@/tools/components/MarketplaceFeeCalculator";
-import EtsyFeeCalculator from "@/tools/components/EtsyFeeCalculator";
-import EbayFeeCalculator from "@/tools/components/EbayFeeCalculator";
-import TikTokShopFeeCalculator from "@/tools/components/TikTokShopFeeCalculator";
-import TakealotFeeCalculator from "@/tools/components/TakealotFeeCalculator";
-import TemuFeeCalculator from "@/tools/components/TemuFeeCalculator";
-import ProductBundleProfitCalculator from "@/tools/components/ProductBundleProfitCalculator";
-import ReorderPointCalculator from "@/tools/components/ReorderPointCalculator";
-import SafetyStockCalculator from "@/tools/components/SafetyStockCalculator";
-import DaysSalesInInventoryCalculator from "@/tools/components/DaysSalesInInventoryCalculator";
-import StockoutCostCalculator from "@/tools/components/StockoutCostCalculator";
-import InventoryCarryingCostCalculator from "@/tools/components/InventoryCarryingCostCalculator";
-import WarehouseSpaceCalculator from "@/tools/components/WarehouseSpaceCalculator";
-import FulfillmentCostCalculator from "@/tools/components/FulfillmentCostCalculator";
-import PickingPackingCostCalculator from "@/tools/components/PickingPackingCostCalculator";
-import OrderFillRateCalculator from "@/tools/components/OrderFillRateCalculator";
-import CashFlowCalculator from "@/tools/components/CashFlowCalculator";
-import OperatingProfitCalculator from "@/tools/components/OperatingProfitCalculator";
-import EbitdaCalculator from "@/tools/components/EbitdaCalculator";
-import DepreciationCalculator from "@/tools/components/DepreciationCalculator";
-import WorkingCapitalCalculator from "@/tools/components/WorkingCapitalCalculator";
-import CurrentRatioCalculator from "@/tools/components/CurrentRatioCalculator";
-import QuickRatioCalculator from "@/tools/components/QuickRatioCalculator";
-import DebtToEquityCalculator from "@/tools/components/DebtToEquityCalculator";
-import InterestCoverageRatioCalculator from "@/tools/components/InterestCoverageRatioCalculator";
-import NpvCalculator from "@/tools/components/NpvCalculator";
-import IrrCalculator from "@/tools/components/IrrCalculator";
-import DiscountRateCalculator from "@/tools/components/DiscountRateCalculator";
-import InvoiceDiscountingCalculator from "@/tools/components/InvoiceDiscountingCalculator";
-import AccountsReceivableTurnoverCalculator from "@/tools/components/AccountsReceivableTurnoverCalculator";
-import AccountsPayableDaysCalculator from "@/tools/components/AccountsPayableDaysCalculator";
-import ChurnRateCalculator from "@/tools/components/ChurnRateCalculator";
-import SaasLtvCacRatioCalculator from "@/tools/components/SaasLtvCacRatioCalculator";
-import ArpuCalculator from "@/tools/components/ArpuCalculator";
-import ArpaCalculator from "@/tools/components/ArpaCalculator";
-import NetRevenueRetentionCalculator from "@/tools/components/NetRevenueRetentionCalculator";
-import GrossProfitCalculator from "@/tools/components/GrossProfitCalculator";
-import OperatingMarginCalculator from "@/tools/components/OperatingMarginCalculator";
-import NetMarginCalculator from "@/tools/components/NetMarginCalculator";
-import FreeCashFlowCalculator from "@/tools/components/FreeCashFlowCalculator";
-import BurnRateCalculator from "@/tools/components/BurnRateCalculator";
-import CashRunwayCalculator from "@/tools/components/CashRunwayCalculator";
-import CustomerPaybackPeriodCalculator from "@/tools/components/CustomerPaybackPeriodCalculator";
-import MonthlyGrowthRateCalculator from "@/tools/components/MonthlyGrowthRateCalculator";
-import AnnualGrowthRateCalculator from "@/tools/components/AnnualGrowthRateCalculator";
-import RevenuePerEmployeeCalculator from "@/tools/components/RevenuePerEmployeeCalculator";
-import BreakEvenCpcCalculator from "@/tools/components/BreakEvenCpcCalculator";
-import MerCalculator from "@/tools/components/MerCalculator";
-import BlendedCacCalculator from "@/tools/components/BlendedCacCalculator";
-import SellThroughRateCalculator from "@/tools/components/SellThroughRateCalculator";
-import InventoryToSalesRatioCalculator from "@/tools/components/InventoryToSalesRatioCalculator";
-import PurchaseFrequencyCalculator from "@/tools/components/PurchaseFrequencyCalculator";
-import CustomerConcentrationCalculator from "@/tools/components/CustomerConcentrationCalculator";
-import SalesVelocityCalculator from "@/tools/components/SalesVelocityCalculator";
-import RevenueForecastCalculator from "@/tools/components/RevenueForecastCalculator";
-import RevenuePerSessionCalculator from "@/tools/components/RevenuePerSessionCalculator";
-import CartRecoveryRevenueCalculator from "@/tools/components/CartRecoveryRevenueCalculator";
+function load(path: string): ComponentType {
+  return dynamic(() => import(`@/tools/components/${path}`));
+}
 
 export const toolRegistry: Record<string, ComponentType> = {
-  "profit-margin-calculator": ProfitMarginCalculator,
-  "markup-calculator": MarkupCalculator,
-  "discount-calculator": DiscountCalculator,
-  "break-even-calculator": BreakEvenCalculator,
-  "gross-margin-calculator": GrossMarginCalculator,
-  "profit-calculator": ProfitCalculator,
-  "revenue-calculator": RevenueCalculator,
-  "shopify-fee-calculator": ShopifyFeeCalculator,
-  "stripe-fee-calculator": StripeFeeCalculator,
-  "paypal-fee-calculator": PayPalFeeCalculator,
-  "vat-calculator": VatCalculator,
-  "product-price-calculator": ProductPriceCalculator,
-  "roas-calculator": RoasCalculator,
-  "conversion-rate-calculator": ConversionRateCalculator,
-  "cac-calculator": CacCalculator,
-  "cpc-calculator": CpcCalculator,
-  "cpm-calculator": CpmCalculator,
-  "loan-payment-calculator": LoanPaymentCalculator,
-  "compound-interest-calculator": CompoundInterestCalculator,
-  "roi-calculator": RoiCalculator,
-  "net-profit-calculator": NetProfitCalculator,
-  "contribution-margin-calculator": ContributionMarginCalculator,
-  "cost-per-unit-calculator": CostPerUnitCalculator,
-  "target-profit-calculator": TargetProfitCalculator,
-  "unit-price-calculator": UnitPriceCalculator,
-  "ltv-calculator": LtvCalculator,
-  "marketing-roi-calculator": MarketingRoiCalculator,
-  "cpm-to-cpc-calculator": CpmToCpcCalculator,
-  "cpc-to-cpa-calculator": CpcToCpaCalculator,
-  "conversion-rate-improvement-calculator": ConversionRateImprovementCalculator,
-  "amazon-fba-fee-calculator": AmazonFbaFeeCalculator,
-  "shipping-profit-calculator": ShippingProfitCalculator,
-  "inventory-turnover-calculator": InventoryTurnoverCalculator,
-  "average-order-value-calculator": AverageOrderValueCalculator,
-  "sales-tax-calculator": SalesTaxCalculator,
-  "break-even-revenue-calculator": BreakEvenRevenueCalculator,
-  "revenue-growth-calculator": RevenueGrowthCalculator,
-  "price-elasticity-calculator": PriceElasticityCalculator,
-  "percentage-change-calculator": PercentageChangeCalculator,
-  "employee-cost-calculator": EmployeeCostCalculator,
-  "hourly-rate-calculator": HourlyRateCalculator,
-  "contractor-rate-calculator": ContractorRateCalculator,
-  "commission-calculator": CommissionCalculator,
-  "payback-period-calculator": PaybackPeriodCalculator,
-  "saas-mrr-calculator": SaasMrrCalculator,
-  "saas-arr-calculator": SaasArrCalculator,
-  "loan-interest-calculator": LoanInterestCalculator,
-  "investment-return-calculator": InvestmentReturnCalculator,
-  "amortization-calculator": AmortizationCalculator,
-  "percentage-calculator": PercentageCalculator,
-  "break-even-units-calculator": BreakEvenUnitsCalculator,
-  "wholesale-price-calculator": WholesalePriceCalculator,
-  "retail-margin-calculator": RetailMarginCalculator,
-  "keystone-pricing-calculator": KeystonePricingCalculator,
-  "bundle-pricing-calculator": BundlePricingCalculator,
-  "upsell-revenue-calculator": UpsellRevenueCalculator,
-  "cross-sell-revenue-calculator": CrossSellRevenueCalculator,
-  "subscription-price-calculator": SubscriptionPriceCalculator,
-  "minimum-profitable-price-calculator": MinimumProfitablePriceCalculator,
-  "desired-margin-price-calculator": DesiredMarginPriceCalculator,
-  "price-increase-impact-calculator": PriceIncreaseImpactCalculator,
-  "channel-margin-calculator": ChannelMarginCalculator,
-  "reseller-discount-calculator": ResellerDiscountCalculator,
-  "quote-calculator": QuoteCalculator,
-  "deal-size-calculator": DealSizeCalculator,
-  "cpa-calculator": CpaCalculator,
-  "ctr-calculator": CtrCalculator,
-  "impressions-calculator": ImpressionsCalculator,
-  "clicks-calculator": ClicksCalculator,
-  "lead-to-customer-rate-calculator": LeadToCustomerRateCalculator,
-  "cost-per-lead-calculator": CostPerLeadCalculator,
-  "email-open-rate-calculator": EmailOpenRateCalculator,
-  "email-click-rate-calculator": EmailClickRateCalculator,
-  "unsubscribe-rate-calculator": UnsubscribeRateCalculator,
-  "cart-abandonment-rate-calculator": CartAbandonmentRateCalculator,
-  "remarketing-roi-calculator": RemarketingRoiCalculator,
-  "lead-value-calculator": LeadValueCalculator,
-  "funnel-conversion-calculator": FunnelConversionCalculator,
-  "landing-page-conversion-calculator": LandingPageConversionCalculator,
-  "ad-frequency-calculator": AdFrequencyCalculator,
-  "ecommerce-conversion-funnel-calculator": EcommerceConversionFunnelCalculator,
-  "refund-rate-calculator": RefundRateCalculator,
-  "return-rate-calculator": ReturnRateCalculator,
-  "net-sales-calculator": NetSalesCalculator,
-  "marketplace-fee-calculator": MarketplaceFeeCalculator,
-  "etsy-fee-calculator": EtsyFeeCalculator,
-  "ebay-fee-calculator": EbayFeeCalculator,
-  "tiktok-shop-fee-calculator": TikTokShopFeeCalculator,
-  "takealot-fee-calculator": TakealotFeeCalculator,
-  "temu-fee-calculator": TemuFeeCalculator,
-  "product-bundle-profit-calculator": ProductBundleProfitCalculator,
-  "reorder-point-calculator": ReorderPointCalculator,
-  "safety-stock-calculator": SafetyStockCalculator,
-  "days-sales-in-inventory-calculator": DaysSalesInInventoryCalculator,
-  "stockout-cost-calculator": StockoutCostCalculator,
-  "inventory-carrying-cost-calculator": InventoryCarryingCostCalculator,
-  "warehouse-space-calculator": WarehouseSpaceCalculator,
-  "fulfillment-cost-calculator": FulfillmentCostCalculator,
-  "picking-packing-cost-calculator": PickingPackingCostCalculator,
-  "order-fill-rate-calculator": OrderFillRateCalculator,
-  "cash-flow-calculator": CashFlowCalculator,
-  "operating-profit-calculator": OperatingProfitCalculator,
-  "ebitda-calculator": EbitdaCalculator,
-  "depreciation-calculator": DepreciationCalculator,
-  "working-capital-calculator": WorkingCapitalCalculator,
-  "current-ratio-calculator": CurrentRatioCalculator,
-  "quick-ratio-calculator": QuickRatioCalculator,
-  "debt-to-equity-calculator": DebtToEquityCalculator,
-  "interest-coverage-ratio-calculator": InterestCoverageRatioCalculator,
-  "npv-calculator": NpvCalculator,
-  "irr-calculator": IrrCalculator,
-  "discount-rate-calculator": DiscountRateCalculator,
-  "invoice-discounting-calculator": InvoiceDiscountingCalculator,
-  "accounts-receivable-turnover-calculator": AccountsReceivableTurnoverCalculator,
-  "accounts-payable-days-calculator": AccountsPayableDaysCalculator,
-  "churn-rate-calculator": ChurnRateCalculator,
-  "saas-ltv-cac-ratio-calculator": SaasLtvCacRatioCalculator,
-  "arpu-calculator": ArpuCalculator,
-  "arpa-calculator": ArpaCalculator,
-  "net-revenue-retention-calculator": NetRevenueRetentionCalculator,
-  "gross-profit-calculator": GrossProfitCalculator,
-  "operating-margin-calculator": OperatingMarginCalculator,
-  "net-margin-calculator": NetMarginCalculator,
-  "free-cash-flow-calculator": FreeCashFlowCalculator,
-  "burn-rate-calculator": BurnRateCalculator,
-  "cash-runway-calculator": CashRunwayCalculator,
-  "customer-payback-period-calculator": CustomerPaybackPeriodCalculator,
-  "monthly-growth-rate-calculator": MonthlyGrowthRateCalculator,
-  "annual-growth-rate-calculator": AnnualGrowthRateCalculator,
-  "revenue-per-employee-calculator": RevenuePerEmployeeCalculator,
-  "break-even-cpc-calculator": BreakEvenCpcCalculator,
-  "mer-calculator": MerCalculator,
-  "blended-cac-calculator": BlendedCacCalculator,
-  "sell-through-rate-calculator": SellThroughRateCalculator,
-  "inventory-to-sales-ratio-calculator": InventoryToSalesRatioCalculator,
-  "purchase-frequency-calculator": PurchaseFrequencyCalculator,
-  "customer-concentration-calculator": CustomerConcentrationCalculator,
-  "sales-velocity-calculator": SalesVelocityCalculator,
-  "revenue-forecast-calculator": RevenueForecastCalculator,
-  "revenue-per-session-calculator": RevenuePerSessionCalculator,
-  "cart-recovery-revenue-calculator": CartRecoveryRevenueCalculator,
+  "profit-margin-calculator": load("ProfitMarginCalculator"),
+  "markup-calculator": load("MarkupCalculator"),
+  "discount-calculator": load("DiscountCalculator"),
+  "break-even-calculator": load("BreakEvenCalculator"),
+  "gross-margin-calculator": load("GrossMarginCalculator"),
+  "profit-calculator": load("ProfitCalculator"),
+  "revenue-calculator": load("RevenueCalculator"),
+  "shopify-fee-calculator": load("ShopifyFeeCalculator"),
+  "stripe-fee-calculator": load("StripeFeeCalculator"),
+  "paypal-fee-calculator": load("PayPalFeeCalculator"),
+  "vat-calculator": load("VatCalculator"),
+  "product-price-calculator": load("ProductPriceCalculator"),
+  "roas-calculator": load("RoasCalculator"),
+  "conversion-rate-calculator": load("ConversionRateCalculator"),
+  "cac-calculator": load("CacCalculator"),
+  "cpc-calculator": load("CpcCalculator"),
+  "cpm-calculator": load("CpmCalculator"),
+  "loan-payment-calculator": load("LoanPaymentCalculator"),
+  "compound-interest-calculator": load("CompoundInterestCalculator"),
+  "roi-calculator": load("RoiCalculator"),
+  "net-profit-calculator": load("NetProfitCalculator"),
+  "contribution-margin-calculator": load("ContributionMarginCalculator"),
+  "cost-per-unit-calculator": load("CostPerUnitCalculator"),
+  "target-profit-calculator": load("TargetProfitCalculator"),
+  "unit-price-calculator": load("UnitPriceCalculator"),
+  "ltv-calculator": load("LtvCalculator"),
+  "marketing-roi-calculator": load("MarketingRoiCalculator"),
+  "cpm-to-cpc-calculator": load("CpmToCpcCalculator"),
+  "cpc-to-cpa-calculator": load("CpcToCpaCalculator"),
+  "conversion-rate-improvement-calculator": load("ConversionRateImprovementCalculator"),
+  "amazon-fba-fee-calculator": load("AmazonFbaFeeCalculator"),
+  "shipping-profit-calculator": load("ShippingProfitCalculator"),
+  "inventory-turnover-calculator": load("InventoryTurnoverCalculator"),
+  "average-order-value-calculator": load("AverageOrderValueCalculator"),
+  "sales-tax-calculator": load("SalesTaxCalculator"),
+  "break-even-revenue-calculator": load("BreakEvenRevenueCalculator"),
+  "revenue-growth-calculator": load("RevenueGrowthCalculator"),
+  "price-elasticity-calculator": load("PriceElasticityCalculator"),
+  "percentage-change-calculator": load("PercentageChangeCalculator"),
+  "employee-cost-calculator": load("EmployeeCostCalculator"),
+  "hourly-rate-calculator": load("HourlyRateCalculator"),
+  "contractor-rate-calculator": load("ContractorRateCalculator"),
+  "commission-calculator": load("CommissionCalculator"),
+  "payback-period-calculator": load("PaybackPeriodCalculator"),
+  "saas-mrr-calculator": load("SaasMrrCalculator"),
+  "saas-arr-calculator": load("SaasArrCalculator"),
+  "loan-interest-calculator": load("LoanInterestCalculator"),
+  "investment-return-calculator": load("InvestmentReturnCalculator"),
+  "amortization-calculator": load("AmortizationCalculator"),
+  "percentage-calculator": load("PercentageCalculator"),
+  "break-even-units-calculator": load("BreakEvenUnitsCalculator"),
+  "wholesale-price-calculator": load("WholesalePriceCalculator"),
+  "retail-margin-calculator": load("RetailMarginCalculator"),
+  "keystone-pricing-calculator": load("KeystonePricingCalculator"),
+  "bundle-pricing-calculator": load("BundlePricingCalculator"),
+  "upsell-revenue-calculator": load("UpsellRevenueCalculator"),
+  "cross-sell-revenue-calculator": load("CrossSellRevenueCalculator"),
+  "subscription-price-calculator": load("SubscriptionPriceCalculator"),
+  "minimum-profitable-price-calculator": load("MinimumProfitablePriceCalculator"),
+  "desired-margin-price-calculator": load("DesiredMarginPriceCalculator"),
+  "price-increase-impact-calculator": load("PriceIncreaseImpactCalculator"),
+  "channel-margin-calculator": load("ChannelMarginCalculator"),
+  "reseller-discount-calculator": load("ResellerDiscountCalculator"),
+  "quote-calculator": load("QuoteCalculator"),
+  "deal-size-calculator": load("DealSizeCalculator"),
+  "cpa-calculator": load("CpaCalculator"),
+  "ctr-calculator": load("CtrCalculator"),
+  "impressions-calculator": load("ImpressionsCalculator"),
+  "clicks-calculator": load("ClicksCalculator"),
+  "lead-to-customer-rate-calculator": load("LeadToCustomerRateCalculator"),
+  "cost-per-lead-calculator": load("CostPerLeadCalculator"),
+  "email-open-rate-calculator": load("EmailOpenRateCalculator"),
+  "email-click-rate-calculator": load("EmailClickRateCalculator"),
+  "unsubscribe-rate-calculator": load("UnsubscribeRateCalculator"),
+  "cart-abandonment-rate-calculator": load("CartAbandonmentRateCalculator"),
+  "remarketing-roi-calculator": load("RemarketingRoiCalculator"),
+  "lead-value-calculator": load("LeadValueCalculator"),
+  "funnel-conversion-calculator": load("FunnelConversionCalculator"),
+  "landing-page-conversion-calculator": load("LandingPageConversionCalculator"),
+  "ad-frequency-calculator": load("AdFrequencyCalculator"),
+  "ecommerce-conversion-funnel-calculator": load("EcommerceConversionFunnelCalculator"),
+  "refund-rate-calculator": load("RefundRateCalculator"),
+  "return-rate-calculator": load("ReturnRateCalculator"),
+  "net-sales-calculator": load("NetSalesCalculator"),
+  "marketplace-fee-calculator": load("MarketplaceFeeCalculator"),
+  "etsy-fee-calculator": load("EtsyFeeCalculator"),
+  "ebay-fee-calculator": load("EbayFeeCalculator"),
+  "tiktok-shop-fee-calculator": load("TikTokShopFeeCalculator"),
+  "takealot-fee-calculator": load("TakealotFeeCalculator"),
+  "temu-fee-calculator": load("TemuFeeCalculator"),
+  "product-bundle-profit-calculator": load("ProductBundleProfitCalculator"),
+  "reorder-point-calculator": load("ReorderPointCalculator"),
+  "safety-stock-calculator": load("SafetyStockCalculator"),
+  "days-sales-in-inventory-calculator": load("DaysSalesInInventoryCalculator"),
+  "stockout-cost-calculator": load("StockoutCostCalculator"),
+  "inventory-carrying-cost-calculator": load("InventoryCarryingCostCalculator"),
+  "warehouse-space-calculator": load("WarehouseSpaceCalculator"),
+  "fulfillment-cost-calculator": load("FulfillmentCostCalculator"),
+  "picking-packing-cost-calculator": load("PickingPackingCostCalculator"),
+  "order-fill-rate-calculator": load("OrderFillRateCalculator"),
+  "cash-flow-calculator": load("CashFlowCalculator"),
+  "operating-profit-calculator": load("OperatingProfitCalculator"),
+  "ebitda-calculator": load("EbitdaCalculator"),
+  "depreciation-calculator": load("DepreciationCalculator"),
+  "working-capital-calculator": load("WorkingCapitalCalculator"),
+  "current-ratio-calculator": load("CurrentRatioCalculator"),
+  "quick-ratio-calculator": load("QuickRatioCalculator"),
+  "debt-to-equity-calculator": load("DebtToEquityCalculator"),
+  "interest-coverage-ratio-calculator": load("InterestCoverageRatioCalculator"),
+  "npv-calculator": load("NpvCalculator"),
+  "irr-calculator": load("IrrCalculator"),
+  "discount-rate-calculator": load("DiscountRateCalculator"),
+  "invoice-discounting-calculator": load("InvoiceDiscountingCalculator"),
+  "accounts-receivable-turnover-calculator": load("AccountsReceivableTurnoverCalculator"),
+  "accounts-payable-days-calculator": load("AccountsPayableDaysCalculator"),
+  "churn-rate-calculator": load("ChurnRateCalculator"),
+  "saas-ltv-cac-ratio-calculator": load("SaasLtvCacRatioCalculator"),
+  "arpu-calculator": load("ArpuCalculator"),
+  "arpa-calculator": load("ArpaCalculator"),
+  "net-revenue-retention-calculator": load("NetRevenueRetentionCalculator"),
+  "gross-profit-calculator": load("GrossProfitCalculator"),
+  "operating-margin-calculator": load("OperatingMarginCalculator"),
+  "net-margin-calculator": load("NetMarginCalculator"),
+  "free-cash-flow-calculator": load("FreeCashFlowCalculator"),
+  "burn-rate-calculator": load("BurnRateCalculator"),
+  "cash-runway-calculator": load("CashRunwayCalculator"),
+  "customer-payback-period-calculator": load("CustomerPaybackPeriodCalculator"),
+  "monthly-growth-rate-calculator": load("MonthlyGrowthRateCalculator"),
+  "annual-growth-rate-calculator": load("AnnualGrowthRateCalculator"),
+  "revenue-per-employee-calculator": load("RevenuePerEmployeeCalculator"),
+  "break-even-cpc-calculator": load("BreakEvenCpcCalculator"),
+  "mer-calculator": load("MerCalculator"),
+  "blended-cac-calculator": load("BlendedCacCalculator"),
+  "sell-through-rate-calculator": load("SellThroughRateCalculator"),
+  "inventory-to-sales-ratio-calculator": load("InventoryToSalesRatioCalculator"),
+  "purchase-frequency-calculator": load("PurchaseFrequencyCalculator"),
+  "customer-concentration-calculator": load("CustomerConcentrationCalculator"),
+  "sales-velocity-calculator": load("SalesVelocityCalculator"),
+  "revenue-forecast-calculator": load("RevenueForecastCalculator"),
+  "revenue-per-session-calculator": load("RevenuePerSessionCalculator"),
+  "cart-recovery-revenue-calculator": load("CartRecoveryRevenueCalculator"),
 };

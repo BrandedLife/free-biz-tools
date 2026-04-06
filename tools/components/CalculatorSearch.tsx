@@ -21,7 +21,7 @@ export default function CalculatorSearch() {
         <p className="eyebrow">Find the right calculator</p>
 
         <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-950 md:text-4xl">
-          Search 50+ free business calculators
+          Search 130+ free business calculators
         </h2>
 
         <p className="mt-4 text-slate-600">
