@@ -1,97 +1,180 @@
-Use this calculator to estimate safety stock.
+Use this calculator to estimate safety stock based on demand and lead time variability. Essential for inventory planning, reducing stockout risk, improving service levels, and protecting customer experience against unpredictable supply chain and demand fluctuations.
 
 ## What this calculator does
 
-The safety stock calculator helps estimate extra inventory needed to reduce stockout risk.
+The safety stock calculator helps you estimate how much extra inventory to hold as a buffer against unexpected demand increases or supplier delivery delays.
 
-It is useful for:
+It uses:
 
-- inventory planning
-- demand variability management
-- stock risk reduction
-- supply chain control
+- maximum daily usage
+- average daily usage
+- maximum lead time
+- average lead time
 
-## Formula
+This gives you safety stock — the additional inventory units needed above expected requirements to protect against the worst-case combination of high demand and long delivery delays.
 
-**Safety Stock = (Maximum Daily Usage × Maximum Lead Time) - (Average Daily Usage × Average Lead Time)**
+## How to use the safety stock calculator
+
+1. Enter your **maximum daily usage** — the highest number of units you expect to sell or use on any single day during the period, based on peak demand patterns or historical spikes
+2. Enter your **average daily usage** — the typical number of units sold or used per day under normal conditions
+3. Enter your **maximum lead time** — the longest number of days it has taken or could take a supplier to deliver an order
+4. Enter your **average lead time** — the typical number of days between placing an order and receiving it
+5. The calculator instantly shows your recommended safety stock level in units
+
+Use conservative estimates — erring toward higher maximum figures reduces stockout risk, while lower estimates reduce carrying cost but increase vulnerability.
+
+## Safety Stock Formula
+
+**Safety Stock = (Maximum Daily Usage × Maximum Lead Time) − (Average Daily Usage × Average Lead Time)**
 
 Where:
 
-- **Maximum Daily Usage** = highest expected daily usage
-- **Average Daily Usage** = typical daily usage
-- **Maximum Lead Time** = longest supplier lead time
-- **Average Lead Time** = typical supplier lead time
+- **Maximum Daily Usage** = highest expected daily demand
+- **Average Daily Usage** = typical daily demand
+- **Maximum Lead Time** = longest expected supplier lead time in days
+- **Average Lead Time** = typical supplier lead time in days
+- **Safety Stock** = additional units to hold as a buffer above expected requirements
 
 ## Example calculation
 
 If:
 
-- Maximum daily usage = **30**
-- Average daily usage = **20**
-- Maximum lead time = **15**
-- Average lead time = **10**
+- Maximum daily usage = **30 units**
+- Average daily usage = **20 units**
+- Maximum lead time = **15 days**
+- Average lead time = **10 days**
 
 Then:
 
-- Safety stock = **(30 × 15) - (20 × 10)**
-- Safety stock = **250**
+- Safety stock = **(30 × 15) − (20 × 10)**
+- Safety stock = **450 − 200**
+- Safety stock = **250 units**
+
+Hold 250 additional units beyond your normal reorder calculations to protect against the scenario where demand is at its peak and supplier delivery is at its slowest simultaneously.
 
 ## What is safety stock?
 
-Safety stock is extra inventory kept on hand to protect against unexpected demand or delayed deliveries.
+Safety stock — also called buffer stock — is the additional inventory held above the expected demand during the replenishment lead time. It is a deliberate overstocking strategy designed to absorb the natural variability in both customer demand and supplier delivery times.
 
-## Why safety stock matters
+Without safety stock, any demand spike or delivery delay that exceeds the expected average creates a stockout — meaning customers cannot be served, sales are lost, and potentially orders are cancelled or customers move to competitors.
 
-This calculation helps businesses:
+Safety stock trades carrying cost — the cost of holding extra inventory — against stockout cost — the cost of running out. The formula estimates the buffer needed to protect against the worst-case combination of high demand and long lead time occurring simultaneously.
 
-- reduce stockout risk
-- improve service levels
-- protect customer experience
-- manage uncertainty
+## What is a good safety stock level?
+
+Safety stock level depends on two factors:
+
+**Variability in demand** — businesses with highly consistent daily sales need less safety stock than those with volatile, unpredictable demand patterns.
+
+**Variability in lead times** — businesses with reliable, consistent suppliers need less safety stock than those with highly variable delivery times.
+
+A business where maximum usage is only 10% above average and maximum lead time is only 20% above average needs much less safety stock than one where these variabilities are large.
+
+The goal is to hold enough safety stock to maintain service levels at an acceptable rate — typically 95% to 99% for most businesses — while keeping carrying costs manageable.
+
+## Why safety stock matters for inventory management
+
+Calculating and maintaining appropriate safety stock helps you:
+
+- protect against stockouts caused by demand spikes or supplier delays
+- maintain consistent service levels for customers during supply chain disruptions
+- reduce the operational and financial cost of emergency procurement when stock runs out
+- improve customer satisfaction by ensuring product availability
+- build more resilient inventory management that accounts for the inherent uncertainty in demand and supply
+
+## Safety stock and carrying cost
+
+Every unit of safety stock held has a carrying cost — the annual cost of holding that inventory, typically 20% to 30% of inventory value. Safety stock should be calibrated so that the cost of carrying the buffer is justified by the stockout risk it prevents.
+
+For high-value items with significant stockout consequences — lost sales, damaged customer relationships — a higher safety stock is justified. For low-value items with acceptable substitutes or tolerant customers, a smaller buffer may be appropriate.
+
+Use the [Inventory Carrying Cost Calculator](/tools/inventory-carrying-cost-calculator) to quantify the annual cost of holding your calculated safety stock.
+
+## How to reduce safety stock without increasing stockout risk
+
+Safety stock can be reduced — without increasing stockout vulnerability — by addressing the underlying variability:
+
+- **Improve demand forecasting** — more accurate forecasts reduce the gap between average and maximum expected usage
+- **Negotiate more reliable supplier lead times** — suppliers with consistent, predictable lead times allow smaller buffers
+- **Diversify suppliers** — multiple suppliers reduce the risk of any single supplier's lead time variability affecting stock levels
+- **Increase order frequency** — more frequent smaller orders reduce the amount of buffer needed between replenishments
 
 ## When to use this calculator
 
 Use this calculator when you want to:
 
-- buffer against uncertainty
-- improve stock planning
-- reduce fulfilment issues
-- support purchasing decisions
+- set safety stock levels for a new product or supplier relationship
+- review and update safety stock levels when demand patterns or supplier reliability changes
+- model the inventory implication of adding a new product to your range
+- assess whether current safety stock levels are adequate given recent stockout experience
+- build a complete inventory plan that includes safety stock as a component of total required stock
 
-## Common mistakes
+## Common mistakes when calculating safety stock
 
 Common mistakes include:
 
-- ignoring demand spikes
-- underestimating lead time variability
-- using stale inventory data
-- confusing safety stock with reorder point
+- using average figures for both maximum and average values — this eliminates the safety buffer and defeats the purpose
+- underestimating maximum lead time by using typical rather than worst-case supplier performance
+- using stale demand data that doesn't reflect seasonal peaks or recent demand pattern changes
+- confusing safety stock with reorder point — they are different calculations that work together
 
 ## Safety stock vs reorder point
 
-These are closely related.
+These two inventory metrics are closely related but serve different purposes.
 
-- **Safety stock** is the extra inventory buffer
-- **Reorder point** is the level where you place a new order
+- **Safety stock** is the buffer — the extra units held to absorb variability. It is a component of your total stock level.
+- **Reorder point** is the trigger — the stock level at which you place a new order. It incorporates safety stock plus expected demand during lead time.
+
+**Reorder Point = (Average Daily Usage × Average Lead Time) + Safety Stock**
+
+Safety stock is an input to the reorder point calculation. Use the [Reorder Point Calculator](/tools/reorder-point-calculator) to calculate the full reorder trigger using your safety stock figure.
 
 ## Related calculations
 
-You may also want to use:
+Once you know your safety stock, you may also want to:
 
-- Reorder Point Calculator
-- Inventory Turnover Calculator
-- Stockout Cost Calculator
+- Use the [Reorder Point Calculator](/tools/reorder-point-calculator) to calculate the stock level that triggers a reorder
+- Use the [Inventory Carrying Cost Calculator](/tools/inventory-carrying-cost-calculator) to quantify the cost of holding safety stock
+- Use the [Stockout Cost Calculator](/tools/stockout-cost-calculator) to estimate the cost of running out of stock
+- Use the [Inventory Turnover Calculator](/tools/inventory-turnover-calculator) to assess overall inventory efficiency
+
+## Useful resources
+
+- **Cin7** — inventory management software with safety stock tracking and reorder automation
+- **Shopify** — ecommerce platform with inventory alerts and stock level management
+- **QuickBooks** — accounting software with inventory tracking and purchasing management
+- **Linnworks** — multi-channel inventory management with safety stock and reorder point configuration
 
 ## FAQs
 
-### What does this calculator do?
+### What is safety stock?
 
-It helps you calculate safety stock.
+Safety stock is the additional inventory held above expected demand during replenishment lead time. It acts as a buffer against unexpected demand spikes or supplier delivery delays to prevent stockouts.
 
-### Why is safety stock important?
+### How do you calculate safety stock?
 
-It protects against demand spikes and supplier delays.
+Safety Stock = (Maximum Daily Usage × Maximum Lead Time) − (Average Daily Usage × Average Lead Time).
+
+### How much safety stock should I hold?
+
+It depends on the variability of your demand and lead times. High variability in either requires more safety stock. The formula calculates the buffer needed to protect against the worst-case combination of both.
 
 ### Can safety stock be too high?
 
-Yes. Too much safety stock can tie up cash and increase carrying costs.
+Yes. Excessive safety stock ties up working capital and increases carrying costs without proportional reduction in stockout risk. The goal is to balance stockout protection against carrying cost efficiency.
+
+### What is the difference between safety stock and reorder point?
+
+Safety stock is the buffer — extra units held to absorb variability. Reorder point is the stock level at which you place a new order — calculated as average demand during lead time plus safety stock.
+
+### How does supplier reliability affect safety stock?
+
+Directly — less reliable suppliers with more variable lead times require higher safety stock to protect against delayed deliveries. Improving supplier reliability or diversifying across multiple suppliers is one of the most effective ways to reduce required safety stock.
+
+### Should safety stock change seasonally?
+
+Yes. If demand variability is higher during certain periods — such as peak seasons — safety stock should be increased during those periods and can be reduced during lower-demand periods.
+
+### How does safety stock affect cash flow?
+
+Safety stock represents working capital tied up in inventory. Higher safety stock requires more upfront cash to maintain. For cash-constrained businesses, prioritising safety stock for high-value or high-stockout-cost items and accepting more risk on lower-priority items may be the most practical approach.

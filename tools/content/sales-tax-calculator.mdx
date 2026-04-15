@@ -1,27 +1,36 @@
-Use this calculator to estimate sales tax amount and total price including tax.
+Use this calculator to estimate sales tax amount and total price including tax. Useful for calculating checkout totals, building accurate quotes and invoices, comparing tax-inclusive and tax-exclusive pricing, and understanding final customer payment amounts.
 
 ## What this calculator does
 
-The sales tax calculator shows the tax added to a price and the final total.
+The sales tax calculator helps you instantly calculate the sales tax amount and the total price a customer pays after tax is added.
 
-It is useful for:
+It uses:
 
-- checkout calculations
-- pricing reviews
-- invoicing
-- ecommerce tax checks
+- pre-tax price
+- sales tax rate
+
+This gives you the sales tax amount and the total including tax — the two figures needed for accurate invoicing, checkout pricing, and customer-facing price display.
+
+## How to use the sales tax calculator
+
+1. Enter your **amount** — the price of the product or service before tax is applied
+2. Enter your **sales tax rate** — the applicable sales tax percentage for your jurisdiction, such as 8 or 10
+3. The calculator instantly shows the sales tax amount and the total price including tax
+
+Sales tax rates vary by state, county, city, and product type in the US — and by country and product category internationally. Always verify the correct rate for your specific jurisdiction and product before applying it.
 
 ## Sales Tax Formula
 
-**Sales Tax = Amount × Tax Rate**
+**Sales Tax = Amount × (Tax Rate ÷ 100)**
 
 **Total Including Tax = Amount + Sales Tax**
 
 Where:
 
-- **Amount** = price before tax
+- **Amount** = pre-tax price
 - **Tax Rate** = sales tax percentage
-- **Sales Tax** = added tax amount
+- **Sales Tax** = tax amount to be added
+- **Total Including Tax** = final price paid by the customer
 
 ## Example calculation
 
@@ -32,71 +41,126 @@ If:
 
 Then:
 
-- Sales tax = **8**
-- Total including tax = **108**
+- Sales tax = **100 × 0.08 = 8**
+- Total including tax = **100 + 8 = 108**
+
+The customer pays 108 — the 100 product price plus 8 in sales tax.
 
 ## What is sales tax?
 
-Sales tax is a consumption tax added to the sale of goods and services in many regions.
+Sales tax is a consumption tax levied on the sale of goods and services, typically collected by the seller at the point of sale and remitted to the relevant tax authority. Unlike VAT — which is applied at multiple stages of the supply chain — sales tax is generally applied only at the final retail sale to the end consumer.
 
-It increases the final amount paid by the customer.
+Sales tax is most prominently used in the United States, where rates vary significantly at the state, county, and city level, and are further complicated by product-specific exemptions and special categories. Outside the US, many countries use VAT or GST instead.
 
-## Why sales tax matters
+## US sales tax overview
 
-Sales tax matters because it helps businesses:
+The US has no federal sales tax. Instead, sales tax is administered at the state level, with many states allowing counties and cities to add additional local rates. Combined rates across all jurisdictions can range from 0% in states with no sales tax to over 10% in some locations:
 
-- price products correctly
-- avoid undercharging or overcharging
-- prepare invoices properly
-- understand final customer totals
+- **States with no sales tax** — Oregon, Montana, New Hampshire, Delaware, and Alaska (though Alaska allows local sales taxes)
+- **States with low rates** — Colorado (2.9%), Alabama, Georgia, Hawaii, and Wyoming (all 4%)
+- **States with higher rates** — California (7.25% state rate, up to 10.75% combined), Tennessee (7%), and Mississippi (7%)
+
+Additionally, some product categories — groceries, prescription drugs, and clothing in some states — may be exempt from sales tax or taxed at reduced rates. Always verify the applicable rate for your specific state, county, product type, and transaction.
+
+## Sales tax vs VAT
+
+Sales tax and VAT are both consumption taxes but operate very differently:
+
+- **Sales tax** is charged only at the final point of sale to the consumer. Businesses in the supply chain do not pay sales tax on purchases from other businesses. The full tax is collected once, at retail.
+- **VAT** — value added tax — is charged at every stage of the supply chain. Each business in the chain collects VAT on its sales and reclaims VAT paid on its purchases, with only the net amount remitted to the government. The final consumer bears the full tax burden.
+
+In practical terms, the customer-facing calculation is similar — both add a percentage to the selling price. The difference lies in the supply chain accounting and how tax is reported and reclaimed. Use the [VAT Calculator](/tools/vat-calculator) for VAT-based calculations.
+
+## Sales tax and ecommerce
+
+For ecommerce sellers in the US, sales tax compliance became significantly more complex following the 2018 Supreme Court ruling in South Dakota v. Wayfair, which established that states can require out-of-state sellers to collect and remit sales tax based on economic nexus — typically triggered by a certain level of sales or transactions in a state, even without a physical presence there.
+
+Most ecommerce platforms — including Shopify, WooCommerce, and others — offer automated sales tax calculation tools to manage multi-state compliance. For complex multi-jurisdiction selling, a dedicated sales tax compliance tool such as TaxJar or Avalara is typically recommended.
+
+## Why sales tax matters for pricing and invoicing
+
+Understanding and accurately applying sales tax helps you:
+
+- calculate correct checkout totals that include all applicable tax
+- display tax-inclusive or tax-exclusive prices accurately depending on your market
+- build accurate quotes and invoices that reflect the true amount payable
+- avoid undercharging customers by forgetting to include applicable tax
+- comply with tax collection and remittance obligations in your jurisdiction
 
 ## When to use this calculator
 
 Use this calculator when you want to:
 
-- estimate checkout totals
-- compare tax-inclusive and tax-exclusive pricing
-- build quotes or invoices
-- review ecommerce pricing
+- quickly calculate the tax amount and total for a specific product price and tax rate
+- compare checkout totals at different tax rates
+- build a quote or invoice showing pre-tax price, tax amount, and total
+- verify that your ecommerce platform is applying the correct sales tax calculation
+- estimate the tax component of a transaction for accounting purposes
 
-## Common mistakes
+## Common mistakes when calculating sales tax
 
 Common mistakes include:
 
-- using the wrong tax rate
-- forgetting local tax differences
-- confusing VAT with sales tax
-- applying tax after discounts incorrectly
+- applying the state sales tax rate without adding applicable county and city rates — the combined local rate may be significantly higher than the state rate alone
+- forgetting that some products may be exempt from sales tax or taxed at a different rate in certain jurisdictions
+- confusing sales tax with VAT — they are different systems and should not be used interchangeably
+- applying sales tax after a discount without confirming whether the discount reduces the taxable amount in the applicable jurisdiction — in most cases, sales tax is applied to the discounted price
 
 ## Sales tax vs VAT
 
-These are similar but not identical.
+These two tax systems produce similar customer-facing calculations but operate differently across the supply chain.
 
-- **Sales tax** is usually added at the final sale
-- **VAT** is applied at multiple stages of the value chain
+- **Sales tax** — applied only at the final point of sale. Retailers collect and remit the full tax amount.
+- **VAT** — applied at every supply chain stage. Businesses claim back VAT paid on purchases against VAT collected on sales.
+
+For UK, EU, Australian GST, or any VAT-based calculation, use the [VAT Calculator](/tools/vat-calculator) instead.
 
 ## Related calculations
 
-You may also want to use:
+Once you know your sales tax amount and total, you may also want to:
 
-- VAT Calculator
-- Product Price Calculator
-- Discount Calculator
+- Use the [VAT Calculator](/tools/vat-calculator) for VAT-based tax calculations in the UK, EU, and other VAT jurisdictions
+- Use the [Product Price Calculator](/tools/product-price-calculator) to build a full selling price including tax and target margin
+- Use the [Discount Calculator](/tools/discount-calculator) to calculate discounted prices before applying tax
+- Use the [Quote Calculator](/tools/quote-calculator) to build a full client quote including applicable tax
+
+## Useful resources
+
+- **TaxJar** — automated sales tax calculation, reporting, and filing for US ecommerce sellers
+- **Avalara** — enterprise sales tax compliance software for multi-jurisdiction US and international selling
+- **Shopify** — ecommerce platform with built-in US sales tax calculation and nexus management
+- **QuickBooks** — accounting software with sales tax tracking and automated tax reporting
 
 ## FAQs
 
 ### What is sales tax?
 
-Sales tax is a tax added to the price of goods or services.
+Sales tax is a consumption tax applied to the sale of goods and services at the point of final retail sale. It is collected by the seller and remitted to the relevant tax authority.
 
 ### How do you calculate sales tax?
 
-Sales Tax = Amount × Tax Rate.
-
-### Why is sales tax important?
-
-It helps businesses calculate final prices and comply with pricing requirements.
+Sales Tax = Amount × (Tax Rate ÷ 100). Total Including Tax = Amount + Sales Tax.
 
 ### What is the difference between sales tax and VAT?
 
-Sales tax is typically charged at final sale, while VAT is charged across the supply chain.
+Sales tax is charged only at the final point of sale. VAT is charged at every stage of the supply chain, with businesses reclaiming the VAT paid on their purchases. From the customer's perspective the calculation is similar, but the supply chain accounting is fundamentally different.
+
+### What is the average US sales tax rate?
+
+State sales tax rates range from 0% (in five states with no sales tax) to 7.25% (California). When local county and city taxes are added, combined rates in some locations exceed 10%. The average combined state and local rate across the US is approximately 6% to 7%.
+
+### Is sales tax applied before or after discounts?
+
+In most US jurisdictions, sales tax is applied to the discounted selling price — not the original price. If a 100 item is discounted to 80, sales tax is calculated on 80. Verify the rule for your specific state as exceptions exist.
+
+### Do all products have sales tax applied?
+
+No. Many states exempt certain product categories from sales tax — groceries, prescription drugs, and clothing are commonly exempt in various states. Always verify product-specific exemptions for your jurisdiction.
+
+### What is economic nexus in US sales tax?
+
+Following the 2018 Wayfair ruling, states can require out-of-state sellers to collect and remit sales tax if they exceed a certain threshold of sales or transactions in that state — even without a physical presence. Thresholds vary by state but are commonly 100,000 in sales or 200 transactions per year.
+
+### Do I need to charge sales tax on digital products?
+
+It depends on the state. Many US states now tax digital products — software, downloads, streaming services — though the rules vary significantly. Always check the specific rules for digital goods in each state where you have economic nexus.
