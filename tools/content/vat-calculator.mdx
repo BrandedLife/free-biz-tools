@@ -1,47 +1,225 @@
-Use this calculator to estimate VAT added to a price or included in a price.
+Use this calculator to estimate VAT added to a price or included in a price. Useful for pricing products and services, preparing invoices, comparing VAT-inclusive and VAT-exclusive amounts, and understanding the tax portion of a transaction.
 
 ## What this calculator does
 
-The VAT calculator helps you determine:
+The VAT calculator helps you work out the VAT amount and convert between prices excluding VAT and prices including VAT.
+
+It uses:
+
+- price before VAT or price including VAT
+- VAT rate
+
+This gives you:
 
 - VAT amount
 - price including VAT
 - price excluding VAT
 
+## How to use the VAT calculator
+
+1. Enter the **price** you want to calculate from
+2. Enter the **VAT rate** as a percentage, such as 15 or 20
+3. Use the result to see the VAT amount and the price with or without VAT, depending on your starting figure
+
+Make sure you know whether your starting price already includes VAT or excludes it, because that changes how the VAT amount is derived.
+
 ## VAT Formula
 
-**VAT Amount = Price × VAT Rate**
+**VAT Amount = Price x (VAT Rate / 100)**
+
+**Price Including VAT = Price Excluding VAT + VAT Amount**
+
+Where:
+
+- **Price Excluding VAT** = the amount before VAT is added
+- **VAT Rate** = the applicable VAT percentage
+- **VAT Amount** = the tax amount charged on the price
+- **Price Including VAT** = the total amount paid after VAT is added
 
 ## Example calculation
 
 If:
 
-- Price = **100**
+- Price excluding VAT = **100**
 - VAT rate = **15%**
 
 Then:
 
-VAT = **15**
+- VAT amount = **100 x 0.15 = 15**
+- Price including VAT = **100 + 15 = 115**
 
-Total price = **115**
+This means the VAT portion is 15 and the total amount payable is 115.
 
 ## What is VAT?
 
-Value Added Tax (VAT) is a consumption tax applied to goods and services.
+Value Added Tax (VAT) is a consumption tax applied to goods and services. It is charged as a percentage of the selling price and is usually collected by businesses on behalf of the tax authority.
 
-Many countries apply VAT at different rates.
+VAT is used in many countries, though rates and rules vary by jurisdiction and by product or service type.
+
+## VAT vs sales tax
+
+VAT and sales tax are both consumption taxes, but they operate differently.
+
+- **VAT** is charged at multiple stages of the supply chain, with businesses reclaiming VAT paid on purchases
+- **Sales tax** is usually charged only at the final retail sale to the customer
+
+From the customer perspective, both increase the final price paid. The main difference is how tax is collected and reported through the supply chain.
 
 ## Why VAT matters
 
-VAT calculations help businesses:
+Understanding VAT helps you:
 
-- comply with tax regulations
-- price products correctly
-- manage accounting records
+- price products and services correctly
+- prepare invoices accurately
+- separate tax from revenue for accounting purposes
+- compare VAT-inclusive and VAT-exclusive quotes
+- comply with local tax rules
+
+## When to use this calculator
+
+Use this calculator when you want to:
+
+- add VAT to a net price
+- remove VAT from a gross price
+- check the VAT component of an invoice
+- compare supplier or customer prices on a like-for-like basis
+- estimate tax before issuing a quote or invoice
+
+## Common mistakes when calculating VAT
+
+Common mistakes include:
+
+- applying the wrong VAT rate for the country, product, or service
+- confusing VAT-inclusive prices with VAT-exclusive prices
+- treating VAT as business revenue rather than tax collected on behalf of the authority
+- forgetting that some products may be zero-rated or exempt
+
+Always confirm the correct VAT treatment for the jurisdiction and transaction type involved.
+
+## VAT-inclusive vs VAT-exclusive pricing
+
+These two price formats are closely related but not the same.
+
+- **VAT-exclusive price** is the amount before tax is added
+- **VAT-inclusive price** is the total amount after VAT has been added
+
+Businesses often work with VAT-exclusive prices internally, while customers may see VAT-inclusive prices in quotes, invoices, or checkout pages.
 
 ## Related calculations
 
 You may also want to use:
 
-- Profit Calculator
-- Product Price Calculator
+- Use the [Sales Tax Calculator](/tools/sales-tax-calculator) for a related view
+- Use the [Product Price Calculator](/tools/product-price-calculator) for a related view
+- Use the [Discount Calculator](/tools/discount-calculator) for a related view
+
+## FAQs
+
+### What is VAT?
+
+VAT is a consumption tax added to goods and services. It is charged as a percentage of the selling price and collected by businesses on behalf of the government.
+
+### How do you calculate VAT?
+
+VAT Amount = Price Excluding VAT x (VAT Rate / 100). Then add the VAT amount to the original price to get the VAT-inclusive total.
+
+### What is the difference between VAT-inclusive and VAT-exclusive prices?
+
+VAT-exclusive means the price before tax. VAT-inclusive means the total price after VAT has been added.
+
+### Is VAT the same as sales tax?
+
+No. Both are consumption taxes, but VAT is charged throughout the supply chain, while sales tax is usually charged only at the final sale to the end customer.
+
+### Do all products have VAT applied?
+
+Not always. Some goods and services may be zero-rated, reduced-rated, or exempt depending on the country and tax rules.
+
+## Interpreting your result
+
+Your VAT result should always be interpreted in context:
+
+- compare it against the quoted price basis you are using
+- confirm whether the transaction should be VAT-inclusive or VAT-exclusive
+- check the applicable rate for the specific jurisdiction and product category
+- review the tax portion separately from the underlying selling price
+
+Small pricing or rate errors can materially affect invoice totals and reported tax.
+
+## Data quality checklist
+
+Before acting on this result, verify:
+
+- the VAT rate matches the relevant country or region
+- the price entered is clearly gross or net
+- discounts are applied in the correct order before tax where required
+- exempt, zero-rated, or reduced-rate items are handled correctly
+
+Small input inconsistencies can create incorrect invoice totals or tax reporting issues.
+
+## How to improve this metric
+
+Practical ways to improve VAT accuracy include:
+
+- standardise whether prices are stored as VAT-inclusive or VAT-exclusive
+- document which VAT rates apply to each product or service type
+- review invoices and checkout settings regularly
+- keep tax rules updated whenever you enter a new market
+
+Accuracy improves when pricing, invoicing, and tax settings stay consistent across systems.
+
+## Useful resources
+
+- **Government tax authority guidance** - verify official VAT rates and treatment rules
+- **Google Sheets / Excel** - build VAT pricing models and invoice templates
+- **Accounting software** - automate VAT calculations and reporting
+- **Ecommerce platform tax settings** - validate how VAT is applied at checkout
+
+## Benchmarks and target setting
+
+For VAT, the main target is not optimisation but accuracy and consistency.
+
+When setting controls:
+
+- define a standard pricing basis across the business
+- assign clear ownership for tax rate maintenance
+- test common invoice and checkout scenarios regularly
+- review VAT treatment whenever products, pricing, or markets change
+
+The best benchmark is whether invoices, quotes, and recorded tax match the correct legal treatment every time.
+
+## Reporting cadence and decision workflow
+
+For most businesses, a simple cadence works best:
+
+- **Weekly:** spot-check invoice and checkout calculations if transaction volume is high
+- **Monthly:** review VAT collected and ensure accounting records reconcile
+- **Quarterly:** validate tax settings, rates, and pricing logic across systems
+
+A practical workflow is to confirm the price basis, verify the VAT rate, test the calculation, and then compare the result against invoice or checkout totals before finalising.
+
+## Common analysis scenarios
+
+You can use this calculation in several practical scenarios:
+
+- issuing customer quotes and invoices
+- checking supplier invoices for accuracy
+- comparing net and gross pricing in procurement or sales
+- validating ecommerce checkout totals before launch
+
+In each scenario, keep the tax amount separate from the underlying sale value so reporting stays clear.
+
+## FAQ extensions
+
+### Should I display VAT-inclusive prices to customers?
+
+That depends on local market practice and legal requirements. In many B2C markets, VAT-inclusive display pricing is standard.
+
+### How often should I review VAT rates?
+
+Review them whenever you expand into a new market, change products, or become aware of updated tax rules. At minimum, check them periodically as part of routine finance controls.
+
+### What should I do if my VAT total looks wrong?
+
+First confirm whether the starting price is VAT-inclusive or VAT-exclusive, then verify the VAT rate and whether any discount, exemption, or special treatment applies.
+

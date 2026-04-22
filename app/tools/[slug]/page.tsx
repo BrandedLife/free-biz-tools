@@ -78,13 +78,6 @@ export default async function ToolPage({
   const CalculatorComponent = toolRegistry[slug];
   const content = getToolContent(slug);
 
-  console.log("TOOL PAGE DEBUG", {
-    slug,
-    hasTool: !!tool,
-    hasCalculator: !!CalculatorComponent,
-    hasContent: !!content,
-  });
-
   const fullUrl = `${BASE_URL}/tools/${tool.slug}`;
 
   const schema = {

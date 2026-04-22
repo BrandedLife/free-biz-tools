@@ -1,29 +1,212 @@
-Use this calculator to estimate Shopify transaction fees.
+Use this calculator to estimate the total fees charged by Shopify on a sale, including subscription plan costs and transaction fees.
 
 ## What this calculator does
 
-The Shopify fee calculator helps estimate transaction costs based on Shopify payment rates.
+The Shopify fee calculator helps you estimate the total fees deducted from a sale based on your Shopify plan, payment method, and order value.
 
-## Shopify Fee Structure
+It uses:
 
-Fees vary depending on:
+- order value or monthly revenue
+- Shopify subscription plan
+- payment gateway used
+- number of transactions
 
-- Shopify plan
-- payment provider
-- transaction type
+This gives you the total fees paid to Shopify - including transaction fees and an allocated share of your monthly plan cost - so you can understand the true cost of selling on the platform.
+
+## How to use the Shopify fee calculator
+
+1. Enter the **order value** or average transaction value
+2. Choose your **Shopify plan**
+3. Enter the **payment method or gateway** used
+4. Enter the **number of monthly orders** so the plan cost can be allocated per order
+5. Review the total fee and net revenue after fees
+
+Make sure the gateway, transaction fee, and monthly order assumptions reflect how your store actually operates, because these inputs can materially change the result.
+
+## Shopify Fee Formula
+
+**Total Fee = (Order Value x Transaction Fee %) + (Monthly Plan Cost / Number of Orders)**
+
+Where:
+
+- **Order Value** = the revenue from a single sale before fees
+- **Transaction Fee %** = the per-transaction rate charged by Shopify for your plan and payment method
+- **Monthly Plan Cost** = your fixed Shopify subscription fee per month
+- **Number of Orders** = total orders processed in the month
+
+**Net Revenue = Order Value - Total Fee**
+
+## Example calculation
+
+If:
+
+- Order value = **100**
+- Plan = **Basic Shopify** at **29/month**
+- Transaction fee = **2%** using an external payment gateway
+- Monthly orders = **50**
+
+Then:
+
+- Transaction fee = **100 x 0.02 = 2.00**
+- Plan cost per order = **29 / 50 = 0.58**
+- Total fee per order = **2.00 + 0.58 = 2.58**
+- Net revenue = **100 - 2.58 = 97.42**
+
+A **100** sale on the Basic plan with an external gateway costs **2.58** in fees, leaving net revenue of **97.42**.
+
+## What is a Shopify fee?
+
+A Shopify fee is the cost charged by Shopify to process sales on its platform. It usually includes a fixed monthly subscription fee for access to the platform and, depending on your payment setup, a per-transaction fee applied to each order.
+
+Using Shopify Payments removes the extra Shopify transaction fee for external gateways, but payment processing fees still apply.
+
+## Shopify fee vs payment processing fee
+
+These two charges are often confused but serve different purposes.
+
+- **Shopify transaction fee** applies when you use a third-party payment gateway such as PayPal or Stripe
+- **Payment processing fee** is charged by the payment provider itself for handling the transaction
+
+Using Shopify Payments removes the extra Shopify transaction fee, but it does not eliminate payment processing costs.
 
 ## Why Shopify fees matter
 
-Understanding Shopify fees helps store owners:
+Understanding your Shopify fees helps you:
 
-- price products correctly
-- forecast profits
-- choose the right Shopify plan
+- calculate accurate profit margins on each product and order
+- compare the true cost of different Shopify plans based on your order volume
+- decide whether Shopify Payments or a third-party gateway is more cost-effective
+- price products correctly to account for all platform costs
+
+## When to use this calculator
+
+Use this calculator when you want to:
+
+- estimate the fees on a specific order before pricing a product
+- compare total costs across Basic, Shopify, and Advanced plans
+- evaluate whether switching to Shopify Payments would reduce your fees
+- calculate your monthly platform costs based on expected order volume
+
+## Common mistakes when calculating Shopify fees
+
+Common mistakes include:
+
+- forgetting that third-party gateways incur both a Shopify transaction fee and the gateway's own processing fee
+- comparing plans only on subscription cost without factoring in transaction fee differences at scale
+- using gross revenue rather than net revenue when calculating profit margins
+- not accounting for currency conversion fees when selling internationally
 
 ## Related calculations
 
 You may also want to use:
 
-- Stripe Fee Calculator
-- PayPal Fee Calculator
-- Product Price Calculator
+- Use the [Stripe Fee Calculator](/tools/stripe-fee-calculator) for a related view
+- Use the [PayPal Fee Calculator](/tools/paypal-fee-calculator) for a related view
+- Use the [Profit Calculator](/tools/profit-calculator) for a related view
+- Use the [Product Price Calculator](/tools/product-price-calculator) for a related view
+
+## FAQs
+
+### What is a Shopify fee?
+
+A Shopify fee is the cost Shopify charges to use its platform. It includes a monthly subscription fee based on your plan and, when using external gateways, a per-transaction fee on each sale.
+
+### How do you calculate Shopify fees?
+
+Multiply the order value by the transaction fee percentage for your plan, then add your monthly plan cost divided by your total number of orders. The result is the total fee attributed to that order.
+
+### What is a good Shopify plan for low-volume sellers?
+
+The Basic plan is generally the most cost-effective starting point for new or low-volume stores. As monthly revenue grows, the reduced transaction fees on higher-tier plans can offset the higher subscription cost.
+
+### What is the difference between Shopify fees and Shopify Payments fees?
+
+Shopify fees include the monthly plan cost and any Shopify transaction fee applied when using external gateways. Shopify Payments replaces the extra Shopify transaction fee with a payment processing rate, while the monthly plan cost still applies.
+
+## Interpreting your result
+
+Your Shopify fee result should always be interpreted in context:
+
+- compare it against your product margin and average order value
+- review it alongside your payment mix and monthly order volume
+- compare total platform cost across different Shopify plans
+- separate fixed plan cost from per-order transaction cost
+
+The true cost per order often changes significantly as order volume grows, so scale matters.
+
+## Data quality checklist
+
+Before acting on this result, verify:
+
+- the Shopify plan and subscription cost are current
+- the gateway fee assumptions match your actual payment setup
+- order count and order value are realistic for the same period
+- currency conversion or international selling fees are handled separately if relevant
+
+Small input inconsistencies can materially change the apparent per-order cost.
+
+## How to improve this metric
+
+Practical ways to improve Shopify fee efficiency include:
+
+- increase average order value so fixed costs are spread more effectively
+- review whether your order volume justifies a higher or lower Shopify plan
+- compare Shopify Payments with external gateways based on real fee data
+- refine pricing so platform and payment fees are covered in your margin
+
+Fee efficiency improves most when plan choice, payment method, and pricing strategy are managed together.
+
+## Useful resources
+
+- **Shopify Admin** - review plan details, order volume, and payment settings
+- **Shopify Analytics** - compare order value, volume, and channel mix
+- **Google Sheets / Excel** - model fee impact at different order volumes
+- **Accounting software** - reconcile platform fees against sales and payouts
+
+## Benchmarks and target setting
+
+A good fee target depends on your average order value, margin profile, and monthly order volume.
+
+When setting targets:
+
+- measure total Shopify cost as a percentage of sales
+- compare fee efficiency across plans and gateways
+- define acceptable cost thresholds for low-margin products
+- review targets whenever volume or payment mix shifts materially
+
+Your own historical cost rate is usually the most practical benchmark.
+
+## Reporting cadence and decision workflow
+
+For most stores, a simple cadence works best:
+
+- **Weekly:** spot-check fee behavior during major campaigns or traffic spikes
+- **Monthly:** compare Shopify cost against revenue and net margin
+- **Quarterly:** reassess plan choice, gateway mix, and pricing assumptions
+
+A practical workflow is to calculate the fee, compare it against your target margin, identify the main cost driver, and then test a plan, gateway, or pricing adjustment before scaling.
+
+## Common analysis scenarios
+
+You can use this metric in several practical scenarios:
+
+- platform plan comparisons
+- product pricing reviews
+- payment gateway decisions
+- ecommerce profitability analysis
+
+In each scenario, pair the fee result with margin and conversion performance so platform cost is not evaluated in isolation.
+
+## FAQ extensions
+
+### Is the cheapest Shopify plan always the best option?
+
+Not always. A higher plan can become more cost-effective if it reduces transaction costs enough at higher sales volume.
+
+### Should I compare Shopify cost per order or as a percentage of sales?
+
+Both are useful. Cost per order shows operational efficiency, while percentage of sales helps compare overall channel economics.
+
+### Do Shopify fees matter more for low-ticket products?
+
+Yes. Fixed and percentage-based platform costs usually hurt low-margin and low-value products more heavily.

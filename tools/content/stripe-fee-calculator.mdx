@@ -1,36 +1,229 @@
-Use this calculator to estimate Stripe payment processing fees.
+Use this calculator to estimate Stripe payment processing fees and the net amount you keep after those fees. Useful for ecommerce pricing, subscription planning, margin analysis, and understanding the real cost of card payments.
 
 ## What this calculator does
 
-The Stripe fee calculator estimates the cost of payment processing through Stripe.
+The Stripe fee calculator helps you estimate how much Stripe deducts from a payment and how much revenue remains after payment processing fees.
+
+It uses:
+
+- transaction amount
+- Stripe fee rate
+- fixed fee per transaction
+
+This gives you:
+
+- Stripe fee amount
+- net amount received
+
+## How to use the Stripe fee calculator
+
+1. Enter the **payment amount** for the transaction
+2. Enter the **percentage fee** charged by Stripe, such as 2.9
+3. Enter the **fixed fee** charged per transaction, such as 0.30
+4. The calculator returns the total Stripe fee and your net payout after fees
+
+Make sure the fee inputs match your Stripe pricing plan, country, payment method, and currency, because Stripe rates can vary.
 
 ## Stripe Fee Formula
 
-Typical Stripe fees:
+**Stripe Fee = (Payment Amount x Fee Rate) + Fixed Fee**
 
-**2.9% + $0.30 per transaction**
+**Net Amount = Payment Amount - Stripe Fee**
+
+Where:
+
+- **Payment Amount** = the total amount paid by the customer
+- **Fee Rate** = Stripe's percentage-based transaction fee
+- **Fixed Fee** = the flat fee charged per transaction
+- **Stripe Fee** = the total processing fee deducted
+- **Net Amount** = the amount remaining after Stripe fees
 
 ## Example calculation
 
 If:
 
-- Payment = **100**
+- Payment amount = **100**
+- Fee rate = **2.9%**
+- Fixed fee = **0.30**
 
 Then:
 
-Fee ≈ **3.20**
+- Percentage fee = **100 x 0.029 = 2.90**
+- Stripe fee = **2.90 + 0.30 = 3.20**
+- Net amount = **100 - 3.20 = 96.80**
+
+This means Stripe deducts 3.20 in processing fees and you keep 96.80 from a 100 payment.
+
+## What are Stripe fees?
+
+Stripe fees are the charges Stripe applies for processing payments through its platform. These fees usually include a percentage of the transaction value plus a fixed amount per transaction.
+
+Depending on your region and setup, Stripe may also charge additional fees for international cards, currency conversion, disputes, refunds, or alternative payment methods.
+
+## Stripe fees vs payment gateway fees
+
+These are closely related but not always identical.
+
+- **Stripe fees** are the charges Stripe applies for payment processing through its platform
+- **Payment gateway fees** is the broader category covering fees charged by any provider that processes online payments
+
+Stripe is one example of a payment processor and gateway, but other platforms such as PayPal or Shopify Payments may use different fee structures.
 
 ## Why Stripe fees matter
 
-Stripe fees impact:
+Understanding Stripe fees helps you:
 
-- ecommerce profitability
-- subscription pricing
-- payment processing costs
+- calculate accurate profit margins on each transaction
+- price products and subscriptions more effectively
+- compare payment providers on a like-for-like basis
+- estimate the real payout from each sale
+- avoid underestimating payment processing costs
+
+## When to use this calculator
+
+Use this calculator when you want to:
+
+- estimate the fee on a single customer payment
+- compare Stripe costs with other payment providers
+- work out net revenue after processing fees
+- model subscription pricing after payment costs
+- test how fee changes affect profitability
+
+## Common mistakes when calculating Stripe fees
+
+Common mistakes include:
+
+- using a default Stripe rate without checking your actual country or account pricing
+- forgetting that international cards or currency conversion may add extra fees
+- calculating profit from gross revenue instead of net revenue after processing fees
+- ignoring the effect of refunds, disputes, or failed payments on total payment costs
+
+Always confirm the exact Stripe fee structure that applies to your business and transaction type.
+
+## Stripe fees vs PayPal fees
+
+Stripe and PayPal both charge payment processing fees, but their structures and additional charges can differ.
+
+- **Stripe fees** are often a percentage plus a fixed fee and are commonly used for embedded checkout and subscription billing
+- **PayPal fees** may use a similar base structure but can differ by account type, checkout method, and region
+
+Comparing both on the same transaction amount helps you see which provider leaves you with a higher net payout.
 
 ## Related calculations
 
 You may also want to use:
 
-- PayPal Fee Calculator
-- Profit Calculator
+- Use the [PayPal Fee Calculator](/tools/paypal-fee-calculator) for a related view
+- Use the [Shopify Fee Calculator](/tools/shopify-fee-calculator) for a related view
+- Use the [Profit Calculator](/tools/profit-calculator) for a related view
+
+## FAQs
+
+### What are Stripe fees?
+
+Stripe fees are the charges deducted for processing payments through Stripe. They typically include a percentage of the transaction value plus a fixed fee per payment.
+
+### How do you calculate Stripe fees?
+
+Stripe Fee = (Payment Amount x Fee Rate) + Fixed Fee. Then subtract the Stripe fee from the payment amount to get the net amount received.
+
+### What is the standard Stripe fee?
+
+A common example is **2.9% + 0.30** per transaction, but Stripe pricing varies by country, payment method, and account setup.
+
+### Does Stripe charge the same fee for all payments?
+
+No. Fees can vary for international cards, currency conversion, manual card entry, disputes, and some alternative payment methods.
+
+### Why is my Stripe payout lower than expected?
+
+Your payout may be reduced by transaction fees, refunds, chargebacks, reserve holds, or other Stripe account adjustments beyond the base processing fee.
+
+## Interpreting your result
+
+Your Stripe fee result should always be interpreted in context:
+
+- compare it against your product margin and average order value
+- review it alongside other platform or marketplace fees
+- check whether extra cross-border or conversion charges apply
+- separate gross revenue from net payout when evaluating profitability
+
+Small fee differences can materially affect margins when transaction volume is high.
+
+## Data quality checklist
+
+Before acting on this result, verify:
+
+- the Stripe percentage fee matches your actual pricing plan
+- the fixed fee matches the correct currency and country
+- the transaction amount is gross and correctly entered
+- any additional international or conversion fees are accounted for separately
+
+Small input inconsistencies can lead to incorrect payout or margin assumptions.
+
+## How to improve this metric
+
+Practical ways to improve the impact of Stripe fees include:
+
+- increase average order value so fixed fees make up a smaller share of each transaction
+- review pricing to ensure processing costs are covered in your margin
+- compare providers if your payment mix changes materially
+- reduce refunds and disputes, which add extra cost and operational drag
+
+Fee efficiency improves when transaction value, pricing strategy, and payment mix are managed together.
+
+## Useful resources
+
+- **Stripe Dashboard** - review actual fee reports, payouts, disputes, and payment breakdowns
+- **Google Sheets / Excel** - model fee impact across different price points
+- **Accounting software** - reconcile payment fees against sales and payouts
+- **Platform checkout analytics** - compare conversion and payment method performance
+
+## Benchmarks and target setting
+
+A good target depends on your average order value, margin profile, and payment mix.
+
+When setting targets:
+
+- measure fees as a percentage of gross sales
+- track fee impact by payment method or sales channel
+- set acceptable payout thresholds for low-margin products
+- review pricing whenever processing costs change materially
+
+Your best benchmark is usually your own historical fee rate relative to revenue and margin.
+
+## Reporting cadence and decision workflow
+
+For most businesses, a simple cadence works best:
+
+- **Weekly:** spot-check fees and payout variances if payment volume is high
+- **Monthly:** reconcile Stripe fees against revenue and net payouts
+- **Quarterly:** review payment mix, pricing, and provider economics
+
+A practical workflow is to confirm the fee structure, calculate the transaction cost, compare the net payout against your target margin, and then adjust pricing or channel strategy if needed.
+
+## Common analysis scenarios
+
+You can use this metric in several practical scenarios:
+
+- setting product prices for online sales
+- comparing Stripe against PayPal or other gateways
+- evaluating the profitability of low-ticket products
+- estimating subscription revenue net of payment processing
+
+In each scenario, pair the fee result with margin and conversion data so payment cost is not evaluated in isolation.
+
+## FAQ extensions
+
+### Should I include Stripe fees when pricing products?
+
+Yes. If you ignore payment processing costs, your margin calculation will be overstated, especially on low-value transactions.
+
+### How often should I review Stripe fees?
+
+Review them regularly, especially when expanding internationally, changing payment methods, or noticing changes in payout patterns.
+
+### What should I do if Stripe fees are hurting margins?
+
+Check your average order value, pricing structure, refund rate, and payment mix. Then compare Stripe's net cost with alternative payment providers if needed.
+
